@@ -1,0 +1,259 @@
+{
+  "project": "postgresql",
+  "repo": "",
+  "ref": "current",
+  "commit": "",
+  "license": "PostgreSQL License",
+  "license_url": "https://www.postgresql.org/about/licence/",
+  "updated_at": "2026-08-18",
+  "download_date": "2026-08-18",
+  "source_base": "https://www.postgresql.org/docs/current/",
+  "files": [
+    {
+      "filename": "tutorial.md",
+      "source_path": "tutorial.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial.html",
+      "title": "PostgreSQL: Documentation: 18: Part I. Tutorial"
+    },
+    {
+      "filename": "tutorial-createdb.md",
+      "source_path": "tutorial-createdb.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial-createdb.html",
+      "title": "PostgreSQL: Documentation: 18: 1.3. Creating a Database"
+    },
+    {
+      "filename": "tutorial-select.md",
+      "source_path": "tutorial-select.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial-select.html",
+      "title": "PostgreSQL: Documentation: 18: 2.5. Querying a Table"
+    },
+    {
+      "filename": "tutorial-join.md",
+      "source_path": "tutorial-join.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial-join.html",
+      "title": "PostgreSQL: Documentation: 18: 2.6. Joins Between Tables"
+    },
+    {
+      "filename": "tutorial-advanced.md",
+      "source_path": "tutorial-advanced.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial-advanced.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 3. Advanced Features"
+    },
+    {
+      "filename": "tutorial-window.md",
+      "source_path": "tutorial-window.html",
+      "source_url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+      "title": "PostgreSQL: Documentation: 18: 3.5. Window Functions"
+    },
+    {
+      "filename": "ddl.md",
+      "source_path": "ddl.html",
+      "source_url": "https://www.postgresql.org/docs/current/ddl.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 5. Data Definition"
+    },
+    {
+      "filename": "ddl-basics.md",
+      "source_path": "ddl-basics.html",
+      "source_url": "https://www.postgresql.org/docs/current/ddl-basics.html",
+      "title": "PostgreSQL: Documentation: 18: 5.1. Table Basics"
+    },
+    {
+      "filename": "ddl-constraints.md",
+      "source_path": "ddl-constraints.html",
+      "source_url": "https://www.postgresql.org/docs/current/ddl-constraints.html",
+      "title": "PostgreSQL: Documentation: 18: 5.5. Constraints"
+    },
+    {
+      "filename": "ddl-partitioning.md",
+      "source_path": "ddl-partitioning.html",
+      "source_url": "https://www.postgresql.org/docs/current/ddl-partitioning.html",
+      "title": "PostgreSQL: Documentation: 18: 5.12. Table Partitioning"
+    },
+    {
+      "filename": "queries.md",
+      "source_path": "queries.html",
+      "source_url": "https://www.postgresql.org/docs/current/queries.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 7. Queries"
+    },
+    {
+      "filename": "queries-select-lists.md",
+      "source_path": "queries-select-lists.html",
+      "source_url": "https://www.postgresql.org/docs/current/queries-select-lists.html",
+      "title": "PostgreSQL: Documentation: 18: 7.3. Select Lists"
+    },
+    {
+      "filename": "queries-table-expressions.md",
+      "source_path": "queries-table-expressions.html",
+      "source_url": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+      "title": "PostgreSQL: Documentation: 18: 7.2. Table Expressions"
+    },
+    {
+      "filename": "queries-with.md",
+      "source_path": "queries-with.html",
+      "source_url": "https://www.postgresql.org/docs/current/queries-with.html",
+      "title": "PostgreSQL: Documentation: 18: 7.8. WITH Queries (Common Table Expressions)"
+    },
+    {
+      "filename": "queries-limit.md",
+      "source_path": "queries-limit.html",
+      "source_url": "https://www.postgresql.org/docs/current/queries-limit.html",
+      "title": "PostgreSQL: Documentation: 18: 7.6. LIMIT and OFFSET"
+    },
+    {
+      "filename": "sql-select.md",
+      "source_path": "sql-select.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-select.html",
+      "title": "PostgreSQL: Documentation: 18: SELECT"
+    },
+    {
+      "filename": "sql-insert.md",
+      "source_path": "sql-insert.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-insert.html",
+      "title": "PostgreSQL: Documentation: 18: INSERT"
+    },
+    {
+      "filename": "sql-update.md",
+      "source_path": "sql-update.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-update.html",
+      "title": "PostgreSQL: Documentation: 18: UPDATE"
+    },
+    {
+      "filename": "sql-delete.md",
+      "source_path": "sql-delete.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-delete.html",
+      "title": "PostgreSQL: Documentation: 18: DELETE"
+    },
+    {
+      "filename": "sql-createindex.md",
+      "source_path": "sql-createindex.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-createindex.html",
+      "title": "PostgreSQL: Documentation: 18: CREATE INDEX"
+    },
+    {
+      "filename": "sql-createtable.md",
+      "source_path": "sql-createtable.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-createtable.html",
+      "title": "PostgreSQL: Documentation: 18: CREATE TABLE"
+    },
+    {
+      "filename": "sql-altertable.md",
+      "source_path": "sql-altertable.html",
+      "source_url": "https://www.postgresql.org/docs/current/sql-altertable.html",
+      "title": "PostgreSQL: Documentation: 18: ALTER TABLE"
+    },
+    {
+      "filename": "indexes.md",
+      "source_path": "indexes.html",
+      "source_url": "https://www.postgresql.org/docs/current/indexes.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 11. Indexes"
+    },
+    {
+      "filename": "indexes-types.md",
+      "source_path": "indexes-types.html",
+      "source_url": "https://www.postgresql.org/docs/current/indexes-types.html",
+      "title": "PostgreSQL: Documentation: 18: 11.2. Index Types"
+    },
+    {
+      "filename": "indexes-ordering.md",
+      "source_path": "indexes-ordering.html",
+      "source_url": "https://www.postgresql.org/docs/current/indexes-ordering.html",
+      "title": "PostgreSQL: Documentation: 18: 11.4. Indexes and ORDER BY"
+    },
+    {
+      "filename": "functions-string.md",
+      "source_path": "functions-string.html",
+      "source_url": "https://www.postgresql.org/docs/current/functions-string.html",
+      "title": "PostgreSQL: Documentation: 18: 9.4. String Functions and Operators"
+    },
+    {
+      "filename": "functions-datetime.md",
+      "source_path": "functions-datetime.html",
+      "source_url": "https://www.postgresql.org/docs/current/functions-datetime.html",
+      "title": "PostgreSQL: Documentation: 18: 9.9. Date/Time Functions and Operators"
+    },
+    {
+      "filename": "functions-aggregate.md",
+      "source_path": "functions-aggregate.html",
+      "source_url": "https://www.postgresql.org/docs/current/functions-aggregate.html",
+      "title": "PostgreSQL: Documentation: 18: 9.21. Aggregate Functions"
+    },
+    {
+      "filename": "functions-window.md",
+      "source_path": "functions-window.html",
+      "source_url": "https://www.postgresql.org/docs/current/functions-window.html",
+      "title": "PostgreSQL: Documentation: 18: 9.22. Window Functions"
+    },
+    {
+      "filename": "transactions.md",
+      "source_path": "transactions.html",
+      "source_url": "https://www.postgresql.org/docs/current/transactions.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 67. Transaction Processing"
+    },
+    {
+      "filename": "mvcc.md",
+      "source_path": "mvcc.html",
+      "source_url": "https://www.postgresql.org/docs/current/mvcc.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 13. Concurrency Control"
+    },
+    {
+      "filename": "routine-vacuuming.md",
+      "source_path": "routine-vacuuming.html",
+      "source_url": "https://www.postgresql.org/docs/current/routine-vacuuming.html",
+      "title": "PostgreSQL: Documentation: 18: 24.1. Routine Vacuuming"
+    },
+    {
+      "filename": "backup.md",
+      "source_path": "backup.html",
+      "source_url": "https://www.postgresql.org/docs/current/backup.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 25. Backup and Restore"
+    },
+    {
+      "filename": "wal.md",
+      "source_path": "wal.html",
+      "source_url": "https://www.postgresql.org/docs/current/wal.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 28. Reliability and the Write-Ahead Log"
+    },
+    {
+      "filename": "logical-replication.md",
+      "source_path": "logical-replication.html",
+      "source_url": "https://www.postgresql.org/docs/current/logical-replication.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 29. Logical Replication"
+    },
+    {
+      "filename": "high-availability.md",
+      "source_path": "high-availability.html",
+      "source_url": "https://www.postgresql.org/docs/current/high-availability.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 26. High Availability, Load Balancing, and Replication"
+    },
+    {
+      "filename": "monitoring.md",
+      "source_path": "monitoring.html",
+      "source_url": "https://www.postgresql.org/docs/current/monitoring.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 27. Monitoring Database Activity"
+    },
+    {
+      "filename": "runtime-config-resource.md",
+      "source_path": "runtime-config-resource.html",
+      "source_url": "https://www.postgresql.org/docs/current/runtime-config-resource.html",
+      "title": "PostgreSQL: Documentation: 18: 19.4. Resource Consumption"
+    },
+    {
+      "filename": "performance-tips.md",
+      "source_path": "performance-tips.html",
+      "source_url": "https://www.postgresql.org/docs/current/performance-tips.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 14. Performance Tips"
+    },
+    {
+      "filename": "client-authentication.md",
+      "source_path": "client-authentication.html",
+      "source_url": "https://www.postgresql.org/docs/current/client-authentication.html",
+      "title": "PostgreSQL: Documentation: 18: Chapter 20. Client Authentication"
+    },
+    {
+      "filename": "auth-pg-hba-conf.md",
+      "source_path": "auth-pg-hba-conf.html",
+      "source_url": "https://www.postgresql.org/docs/current/auth-pg-hba-conf.html",
+      "title": "PostgreSQL: Documentation: 18: 20.1. The pg_hba.conf File"
+    }
+  ]
+}

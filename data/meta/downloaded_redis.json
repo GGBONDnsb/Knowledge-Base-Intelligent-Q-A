@@ -1,0 +1,193 @@
+{
+  "project": "redis",
+  "repo": "redis/redis-doc",
+  "ref": "master",
+  "commit": "1044224477fceacc5af56a636b0a7495d19e533c",
+  "license": "NOASSERTION",
+  "license_url": "",
+  "updated_at": "2026-08-15T17:37:19Z",
+  "download_date": "2026-08-18",
+  "source_base": "https://github.com/redis/redis-doc/tree/master",
+  "files": [
+    {
+      "filename": "docs/get-started/data-store.md",
+      "source_path": "docs/get-started/data-store.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/get-started/data-store.md"
+    },
+    {
+      "filename": "docs/get-started/faq.md",
+      "source_path": "docs/get-started/faq.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/get-started/faq.md"
+    },
+    {
+      "filename": "docs/data-types/strings.md",
+      "source_path": "docs/data-types/strings.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/strings.md"
+    },
+    {
+      "filename": "docs/data-types/lists.md",
+      "source_path": "docs/data-types/lists.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/lists.md"
+    },
+    {
+      "filename": "docs/data-types/sets.md",
+      "source_path": "docs/data-types/sets.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/sets.md"
+    },
+    {
+      "filename": "docs/data-types/hashes.md",
+      "source_path": "docs/data-types/hashes.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/hashes.md"
+    },
+    {
+      "filename": "docs/data-types/sorted-sets.md",
+      "source_path": "docs/data-types/sorted-sets.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/sorted-sets.md"
+    },
+    {
+      "filename": "docs/data-types/streams.md",
+      "source_path": "docs/data-types/streams.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/streams.md"
+    },
+    {
+      "filename": "docs/data-types/bitmaps.md",
+      "source_path": "docs/data-types/bitmaps.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/bitmaps.md"
+    },
+    {
+      "filename": "docs/data-types/bitfields.md",
+      "source_path": "docs/data-types/bitfields.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/bitfields.md"
+    },
+    {
+      "filename": "docs/data-types/geospatial.md",
+      "source_path": "docs/data-types/geospatial.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/data-types/geospatial.md"
+    },
+    {
+      "filename": "docs/connect/cli.md",
+      "source_path": "docs/connect/cli.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/connect/cli.md"
+    },
+    {
+      "filename": "docs/connect/clients/python.md",
+      "source_path": "docs/connect/clients/python.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/connect/clients/python.md"
+    },
+    {
+      "filename": "docs/connect/clients/java/lettuce.md",
+      "source_path": "docs/connect/clients/java/lettuce.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/connect/clients/java/lettuce.md"
+    },
+    {
+      "filename": "docs/connect/clients/go.md",
+      "source_path": "docs/connect/clients/go.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/connect/clients/go.md"
+    },
+    {
+      "filename": "docs/interact/transactions.md",
+      "source_path": "docs/interact/transactions.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/interact/transactions.md"
+    },
+    {
+      "filename": "docs/interact/pubsub.md",
+      "source_path": "docs/interact/pubsub.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/interact/pubsub.md"
+    },
+    {
+      "filename": "docs/interact/programmability/eval-intro.md",
+      "source_path": "docs/interact/programmability/eval-intro.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/interact/programmability/eval-intro.md"
+    },
+    {
+      "filename": "docs/interact/programmability/functions-intro.md",
+      "source_path": "docs/interact/programmability/functions-intro.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/interact/programmability/functions-intro.md"
+    },
+    {
+      "filename": "docs/interact/programmability/lua-api.md",
+      "source_path": "docs/interact/programmability/lua-api.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/interact/programmability/lua-api.md"
+    },
+    {
+      "filename": "docs/manual/keyspace.md",
+      "source_path": "docs/manual/keyspace.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/manual/keyspace.md"
+    },
+    {
+      "filename": "docs/manual/keyspace-notifications.md",
+      "source_path": "docs/manual/keyspace-notifications.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/manual/keyspace-notifications.md"
+    },
+    {
+      "filename": "docs/manual/client-side-caching.md",
+      "source_path": "docs/manual/client-side-caching.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/manual/client-side-caching.md"
+    },
+    {
+      "filename": "docs/manual/patterns/distributed-locks.md",
+      "source_path": "docs/manual/patterns/distributed-locks.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/manual/patterns/distributed-locks.md"
+    },
+    {
+      "filename": "docs/manual/pipelining/index.md",
+      "source_path": "docs/manual/pipelining/index.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/manual/pipelining/index.md"
+    },
+    {
+      "filename": "docs/management/persistence.md",
+      "source_path": "docs/management/persistence.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/persistence.md"
+    },
+    {
+      "filename": "docs/management/replication.md",
+      "source_path": "docs/management/replication.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/replication.md"
+    },
+    {
+      "filename": "docs/management/sentinel.md",
+      "source_path": "docs/management/sentinel.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/sentinel.md"
+    },
+    {
+      "filename": "docs/management/security/acl.md",
+      "source_path": "docs/management/security/acl.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/security/acl.md"
+    },
+    {
+      "filename": "docs/management/security/encryption.md",
+      "source_path": "docs/management/security/encryption.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/security/encryption.md"
+    },
+    {
+      "filename": "docs/management/optimization/memory-optimization.md",
+      "source_path": "docs/management/optimization/memory-optimization.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/optimization/memory-optimization.md"
+    },
+    {
+      "filename": "docs/management/optimization/latency.md",
+      "source_path": "docs/management/optimization/latency.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/optimization/latency.md"
+    },
+    {
+      "filename": "docs/management/config.md",
+      "source_path": "docs/management/config.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/management/config.md"
+    },
+    {
+      "filename": "docs/reference/protocol-spec.md",
+      "source_path": "docs/reference/protocol-spec.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/reference/protocol-spec.md"
+    },
+    {
+      "filename": "docs/reference/eviction/index.md",
+      "source_path": "docs/reference/eviction/index.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/reference/eviction/index.md"
+    },
+    {
+      "filename": "docs/reference/cluster-spec.md",
+      "source_path": "docs/reference/cluster-spec.md",
+      "source_url": "https://github.com/redis/redis-doc/blob/master/docs/reference/cluster-spec.md"
+    }
+  ]
+}

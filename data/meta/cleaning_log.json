@@ -1,0 +1,1488 @@
+[
+  {
+    "doc_id": "YQ-INST-001",
+    "raw": "institutional\\YQ-INST-001-员工考勤管理制度.md",
+    "clean": "institutional\\YQ-INST-001-员工考勤管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-002",
+    "raw": "institutional\\YQ-INST-002-年休假管理办法.md",
+    "clean": "institutional\\YQ-INST-002-年休假管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-003",
+    "raw": "institutional\\YQ-INST-003-差旅报销管理规定.md",
+    "clean": "institutional\\YQ-INST-003-差旅报销管理规定.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-004",
+    "raw": "institutional\\YQ-INST-004-加班管理制度.md",
+    "clean": "institutional\\YQ-INST-004-加班管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-005",
+    "raw": "institutional\\YQ-INST-005-信息安全管理办法.md",
+    "clean": "institutional\\YQ-INST-005-信息安全管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-006",
+    "raw": "institutional\\YQ-INST-006-固定资产管理制度.md",
+    "clean": "institutional\\YQ-INST-006-固定资产管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-007",
+    "raw": "institutional\\YQ-INST-007-招聘管理制度.md",
+    "clean": "institutional\\YQ-INST-007-招聘管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-008",
+    "raw": "institutional\\YQ-INST-008-员工培训管理制度.md",
+    "clean": "institutional\\YQ-INST-008-员工培训管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-009",
+    "raw": "institutional\\YQ-INST-009-绩效考核制度.md",
+    "clean": "institutional\\YQ-INST-009-绩效考核制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-010",
+    "raw": "institutional\\YQ-INST-010-员工行为规范.md",
+    "clean": "institutional\\YQ-INST-010-员工行为规范.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-011",
+    "raw": "institutional\\YQ-INST-011-劳动合同管理办法.md",
+    "clean": "institutional\\YQ-INST-011-劳动合同管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-012",
+    "raw": "institutional\\YQ-INST-012-薪酬福利管理办法.md",
+    "clean": "institutional\\YQ-INST-012-薪酬福利管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-013",
+    "raw": "institutional\\YQ-INST-013-保密管理制度.md",
+    "clean": "institutional\\YQ-INST-013-保密管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-014",
+    "raw": "institutional\\YQ-INST-014-数据安全管理细则.md",
+    "clean": "institutional\\YQ-INST-014-数据安全管理细则.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-015",
+    "raw": "institutional\\YQ-INST-015-办公用品管理办法.md",
+    "clean": "institutional\\YQ-INST-015-办公用品管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-016",
+    "raw": "institutional\\YQ-INST-016-印章与证照管理制度.md",
+    "clean": "institutional\\YQ-INST-016-印章与证照管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-017",
+    "raw": "institutional\\YQ-INST-017-会议室预订与使用规范.md",
+    "clean": "institutional\\YQ-INST-017-会议室预订与使用规范.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-018",
+    "raw": "institutional\\YQ-INST-018-远程办公管理办法.md",
+    "clean": "institutional\\YQ-INST-018-远程办公管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-019",
+    "raw": "institutional\\YQ-INST-019-离职交接管理办法.md",
+    "clean": "institutional\\YQ-INST-019-离职交接管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-020",
+    "raw": "institutional\\YQ-INST-020-员工申诉与沟通制度.md",
+    "clean": "institutional\\YQ-INST-020-员工申诉与沟通制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-021",
+    "raw": "institutional\\YQ-INST-021-信息安全应急预案.md",
+    "clean": "institutional\\YQ-INST-021-信息安全应急预案.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-022",
+    "raw": "institutional\\YQ-INST-022-软件采购与许可管理规定.md",
+    "clean": "institutional\\YQ-INST-022-软件采购与许可管理规定.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-023",
+    "raw": "institutional\\YQ-INST-023-供应商管理制度.md",
+    "clean": "institutional\\YQ-INST-023-供应商管理制度.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-024",
+    "raw": "institutional\\YQ-INST-024-合同管理办法.md",
+    "clean": "institutional\\YQ-INST-024-合同管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-025",
+    "raw": "institutional\\YQ-INST-025-档案管理办法.md",
+    "clean": "institutional\\YQ-INST-025-档案管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-026",
+    "raw": "institutional\\YQ-INST-026-产品发布上线规范.md",
+    "clean": "institutional\\YQ-INST-026-产品发布上线规范.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-027",
+    "raw": "institutional\\YQ-INST-027-研发代码管理规范.md",
+    "clean": "institutional\\YQ-INST-027-研发代码管理规范.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-028",
+    "raw": "institutional\\YQ-INST-028-技术变更管理办法.md",
+    "clean": "institutional\\YQ-INST-028-技术变更管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-029",
+    "raw": "institutional\\YQ-INST-029-客户资料管理规定.md",
+    "clean": "institutional\\YQ-INST-029-客户资料管理规定.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-INST-030",
+    "raw": "institutional\\YQ-INST-030-知识产权管理办法.md",
+    "clean": "institutional\\YQ-INST-030-知识产权管理办法.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-001",
+    "raw": "products\\YQ-PROD-001-云启低代码平台产品介绍.md",
+    "clean": "products\\YQ-PROD-001-云启低代码平台产品介绍.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-002",
+    "raw": "products\\YQ-PROD-002-云启低代码平台用户手册.md",
+    "clean": "products\\YQ-PROD-002-云启低代码平台用户手册.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-003",
+    "raw": "products\\YQ-PROD-003-云启低代码平台 FAQ.md",
+    "clean": "products\\YQ-PROD-003-云启低代码平台 FAQ.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-004",
+    "raw": "products\\YQ-PROD-004-云启低代码平台版本发布记录.md",
+    "clean": "products\\YQ-PROD-004-云启低代码平台版本发布记录.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-005",
+    "raw": "products\\YQ-PROD-005-云启低代码平台问题排查指南.md",
+    "clean": "products\\YQ-PROD-005-云启低代码平台问题排查指南.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-006",
+    "raw": "products\\YQ-PROD-006-云启数据分析平台产品介绍.md",
+    "clean": "products\\YQ-PROD-006-云启数据分析平台产品介绍.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-007",
+    "raw": "products\\YQ-PROD-007-云启数据分析平台用户手册.md",
+    "clean": "products\\YQ-PROD-007-云启数据分析平台用户手册.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-008",
+    "raw": "products\\YQ-PROD-008-云启数据分析平台 FAQ.md",
+    "clean": "products\\YQ-PROD-008-云启数据分析平台 FAQ.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-009",
+    "raw": "products\\YQ-PROD-009-云启数据分析平台版本发布记录.md",
+    "clean": "products\\YQ-PROD-009-云启数据分析平台版本发布记录.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-010",
+    "raw": "products\\YQ-PROD-010-云启数据分析平台集成指南.md",
+    "clean": "products\\YQ-PROD-010-云启数据分析平台集成指南.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-011",
+    "raw": "products\\YQ-PROD-011-云启消息队列产品介绍.md",
+    "clean": "products\\YQ-PROD-011-云启消息队列产品介绍.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-012",
+    "raw": "products\\YQ-PROD-012-云启消息队列快速上手.md",
+    "clean": "products\\YQ-PROD-012-云启消息队列快速上手.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-013",
+    "raw": "products\\YQ-PROD-013-云启消息队列 FAQ.md",
+    "clean": "products\\YQ-PROD-013-云启消息队列 FAQ.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-014",
+    "raw": "products\\YQ-PROD-014-云启消息队列版本发布记录.md",
+    "clean": "products\\YQ-PROD-014-云启消息队列版本发布记录.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-015",
+    "raw": "products\\YQ-PROD-015-云启消息队列运维手册.md",
+    "clean": "products\\YQ-PROD-015-云启消息队列运维手册.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-016",
+    "raw": "products\\YQ-PROD-016-云启容器平台产品介绍.md",
+    "clean": "products\\YQ-PROD-016-云启容器平台产品介绍.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-017",
+    "raw": "products\\YQ-PROD-017-云启容器平台部署指南.md",
+    "clean": "products\\YQ-PROD-017-云启容器平台部署指南.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-018",
+    "raw": "products\\YQ-PROD-018-云启容器平台 FAQ.md",
+    "clean": "products\\YQ-PROD-018-云启容器平台 FAQ.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-019",
+    "raw": "products\\YQ-PROD-019-云启容器平台版本发布记录.md",
+    "clean": "products\\YQ-PROD-019-云启容器平台版本发布记录.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-020",
+    "raw": "products\\YQ-PROD-020-云启容器平台安全加固指南.md",
+    "clean": "products\\YQ-PROD-020-云启容器平台安全加固指南.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-021",
+    "raw": "products\\YQ-PROD-021-云启 API 网关产品介绍.md",
+    "clean": "products\\YQ-PROD-021-云启 API 网关产品介绍.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-022",
+    "raw": "products\\YQ-PROD-022-云启 API 网关用户手册.md",
+    "clean": "products\\YQ-PROD-022-云启 API 网关用户手册.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-023",
+    "raw": "products\\YQ-PROD-023-云启 API 网关 FAQ.md",
+    "clean": "products\\YQ-PROD-023-云启 API 网关 FAQ.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-024",
+    "raw": "products\\YQ-PROD-024-云启 API 网关版本发布记录.md",
+    "clean": "products\\YQ-PROD-024-云启 API 网关版本发布记录.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-PROD-025",
+    "raw": "products\\YQ-PROD-025-云启 API 网关配置示例.md",
+    "clean": "products\\YQ-PROD-025-云启 API 网关配置示例.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-011",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\building-images\\build-tag-and-publish-an-image.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\building-images\\build-tag-and-publish-an-image.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-008",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\building-images\\multi-stage-builds.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\building-images\\multi-stage-builds.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-010",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\building-images\\understanding-image-layers.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\building-images\\understanding-image-layers.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-009",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\building-images\\using-the-build-cache.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\building-images\\using-the-build-cache.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-007",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\building-images\\writing-a-dockerfile.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\building-images\\writing-a-dockerfile.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-016",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\running-containers\\multi-container-applications.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\running-containers\\multi-container-applications.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-015",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\running-containers\\overriding-container-defaults.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\running-containers\\overriding-container-defaults.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-013",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\running-containers\\persisting-container-data.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\running-containers\\persisting-container-data.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-012",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\running-containers\\publishing-ports.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\running-containers\\publishing-ports.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-014",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\running-containers\\sharing-local-files.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\running-containers\\sharing-local-files.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-003",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-a-container.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-a-container.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-005",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-a-registry.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-a-registry.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-004",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-an-image.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-an-image.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-006",
+    "raw": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-docker-compose.md",
+    "clean": "technical\\docker\\get-started\\docker-concepts\\the-basics\\what-is-docker-compose.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-001",
+    "raw": "technical\\docker\\get-started\\docker-overview.md",
+    "clean": "technical\\docker\\get-started\\docker-overview.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-002",
+    "raw": "technical\\docker\\get-started\\get-docker.md",
+    "clean": "technical\\docker\\get-started\\get-docker.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-017",
+    "raw": "technical\\docker\\get-started\\introduction\\build-and-push-first-image.md",
+    "clean": "technical\\docker\\get-started\\introduction\\build-and-push-first-image.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-018",
+    "raw": "technical\\docker\\get-started\\introduction\\develop-with-containers.md",
+    "clean": "technical\\docker\\get-started\\introduction\\develop-with-containers.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-019",
+    "raw": "technical\\docker\\get-started\\introduction\\get-docker-desktop.md",
+    "clean": "technical\\docker\\get-started\\introduction\\get-docker-desktop.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-020",
+    "raw": "technical\\docker\\get-started\\workshop\\02_our_app.md",
+    "clean": "technical\\docker\\get-started\\workshop\\02_our_app.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-021",
+    "raw": "technical\\docker\\get-started\\workshop\\05_persisting_data.md",
+    "clean": "technical\\docker\\get-started\\workshop\\05_persisting_data.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-022",
+    "raw": "technical\\docker\\get-started\\workshop\\06_bind_mounts.md",
+    "clean": "technical\\docker\\get-started\\workshop\\06_bind_mounts.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-023",
+    "raw": "technical\\docker\\get-started\\workshop\\07_multi_container.md",
+    "clean": "technical\\docker\\get-started\\workshop\\07_multi_container.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-024",
+    "raw": "technical\\docker\\get-started\\workshop\\08_using_compose.md",
+    "clean": "technical\\docker\\get-started\\workshop\\08_using_compose.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-025",
+    "raw": "technical\\docker\\get-started\\workshop\\09_image_best.md",
+    "clean": "technical\\docker\\get-started\\workshop\\09_image_best.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-038",
+    "raw": "technical\\docker\\guides\\agentic-ai.md",
+    "clean": "technical\\docker\\guides\\agentic-ai.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-036",
+    "raw": "technical\\docker\\guides\\azure-pipelines.md",
+    "clean": "technical\\docker\\guides\\azure-pipelines.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-034",
+    "raw": "technical\\docker\\guides\\bake.md",
+    "clean": "technical\\docker\\guides\\bake.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-027",
+    "raw": "technical\\docker\\guides\\compose-bake.md",
+    "clean": "technical\\docker\\guides\\compose-bake.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-037",
+    "raw": "technical\\docker\\guides\\container-supported-development.md",
+    "clean": "technical\\docker\\guides\\container-supported-development.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-028",
+    "raw": "technical\\docker\\guides\\databases.md",
+    "clean": "technical\\docker\\guides\\databases.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-031",
+    "raw": "technical\\docker\\guides\\django.md",
+    "clean": "technical\\docker\\guides\\django.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-026",
+    "raw": "technical\\docker\\guides\\docker-compose.md",
+    "clean": "technical\\docker\\guides\\docker-compose.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-032",
+    "raw": "technical\\docker\\guides\\docker-scout.md",
+    "clean": "technical\\docker\\guides\\docker-scout.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-035",
+    "raw": "technical\\docker\\guides\\gha.md",
+    "clean": "technical\\docker\\guides\\gha.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-030",
+    "raw": "technical\\docker\\guides\\go-prometheus-monitoring.md",
+    "clean": "technical\\docker\\guides\\go-prometheus-monitoring.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-029",
+    "raw": "technical\\docker\\guides\\kafka.md",
+    "clean": "technical\\docker\\guides\\kafka.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-DOCKER-033",
+    "raw": "technical\\docker\\guides\\kube-deploy.md",
+    "clean": "technical\\docker\\guides\\kube-deploy.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-027",
+    "raw": "technical\\fastapi\\advanced\\async-tests.md",
+    "clean": "technical\\fastapi\\advanced\\async-tests.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-028",
+    "raw": "technical\\fastapi\\advanced\\behind-a-proxy.md",
+    "clean": "technical\\fastapi\\advanced\\behind-a-proxy.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-026",
+    "raw": "technical\\fastapi\\advanced\\events.md",
+    "clean": "technical\\fastapi\\advanced\\events.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-029",
+    "raw": "technical\\fastapi\\advanced\\generate-clients.md",
+    "clean": "technical\\fastapi\\advanced\\generate-clients.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-025",
+    "raw": "technical\\fastapi\\advanced\\middleware.md",
+    "clean": "technical\\fastapi\\advanced\\middleware.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-030",
+    "raw": "technical\\fastapi\\advanced\\testing-dependencies.md",
+    "clean": "technical\\fastapi\\advanced\\testing-dependencies.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-024",
+    "raw": "technical\\fastapi\\advanced\\websockets.md",
+    "clean": "technical\\fastapi\\advanced\\websockets.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-003",
+    "raw": "technical\\fastapi\\alternatives.md",
+    "clean": "technical\\fastapi\\alternatives.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-002",
+    "raw": "technical\\fastapi\\async.md",
+    "clean": "technical\\fastapi\\async.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-032",
+    "raw": "technical\\fastapi\\deployment\\docker.md",
+    "clean": "technical\\fastapi\\deployment\\docker.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-031",
+    "raw": "technical\\fastapi\\deployment\\index.md",
+    "clean": "technical\\fastapi\\deployment\\index.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-033",
+    "raw": "technical\\fastapi\\deployment\\versions.md",
+    "clean": "technical\\fastapi\\deployment\\versions.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-001",
+    "raw": "technical\\fastapi\\features.md",
+    "clean": "technical\\fastapi\\features.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-023",
+    "raw": "technical\\fastapi\\tutorial\\background-tasks.md",
+    "clean": "technical\\fastapi\\tutorial\\background-tasks.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-008",
+    "raw": "technical\\fastapi\\tutorial\\body-updates.md",
+    "clean": "technical\\fastapi\\tutorial\\body-updates.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-007",
+    "raw": "technical\\fastapi\\tutorial\\body.md",
+    "clean": "technical\\fastapi\\tutorial\\body.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-020",
+    "raw": "technical\\fastapi\\tutorial\\cors.md",
+    "clean": "technical\\fastapi\\tutorial\\cors.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-016",
+    "raw": "technical\\fastapi\\tutorial\\dependencies\\index.md",
+    "clean": "technical\\fastapi\\tutorial\\dependencies\\index.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-012",
+    "raw": "technical\\fastapi\\tutorial\\extra-models.md",
+    "clean": "technical\\fastapi\\tutorial\\extra-models.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-004",
+    "raw": "technical\\fastapi\\tutorial\\first-steps.md",
+    "clean": "technical\\fastapi\\tutorial\\first-steps.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-013",
+    "raw": "technical\\fastapi\\tutorial\\handling-errors.md",
+    "clean": "technical\\fastapi\\tutorial\\handling-errors.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-021",
+    "raw": "technical\\fastapi\\tutorial\\middleware.md",
+    "clean": "technical\\fastapi\\tutorial\\middleware.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-010",
+    "raw": "technical\\fastapi\\tutorial\\path-params-numeric-validations.md",
+    "clean": "technical\\fastapi\\tutorial\\path-params-numeric-validations.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-005",
+    "raw": "technical\\fastapi\\tutorial\\path-params.md",
+    "clean": "technical\\fastapi\\tutorial\\path-params.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-009",
+    "raw": "technical\\fastapi\\tutorial\\query-params-str-validations.md",
+    "clean": "technical\\fastapi\\tutorial\\query-params-str-validations.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-006",
+    "raw": "technical\\fastapi\\tutorial\\query-params.md",
+    "clean": "technical\\fastapi\\tutorial\\query-params.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-014",
+    "raw": "technical\\fastapi\\tutorial\\request-files.md",
+    "clean": "technical\\fastapi\\tutorial\\request-files.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-011",
+    "raw": "technical\\fastapi\\tutorial\\response-model.md",
+    "clean": "technical\\fastapi\\tutorial\\response-model.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-017",
+    "raw": "technical\\fastapi\\tutorial\\security\\first-steps.md",
+    "clean": "technical\\fastapi\\tutorial\\security\\first-steps.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-018",
+    "raw": "technical\\fastapi\\tutorial\\security\\oauth2-jwt.md",
+    "clean": "technical\\fastapi\\tutorial\\security\\oauth2-jwt.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-015",
+    "raw": "technical\\fastapi\\tutorial\\sql-databases.md",
+    "clean": "technical\\fastapi\\tutorial\\sql-databases.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-022",
+    "raw": "technical\\fastapi\\tutorial\\static-files.md",
+    "clean": "technical\\fastapi\\tutorial\\static-files.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-FASTAPI-019",
+    "raw": "technical\\fastapi\\tutorial\\testing.md",
+    "clean": "technical\\fastapi\\tutorial\\testing.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-001",
+    "raw": "technical\\langchain\\concepts\\context.mdx",
+    "clean": "technical\\langchain\\concepts\\context.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-002",
+    "raw": "technical\\langchain\\concepts\\memory.mdx",
+    "clean": "technical\\langchain\\concepts\\memory.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-003",
+    "raw": "technical\\langchain\\concepts\\providers-and-models.mdx",
+    "clean": "technical\\langchain\\concepts\\providers-and-models.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-007",
+    "raw": "technical\\langchain\\langchain\\agents.mdx",
+    "clean": "technical\\langchain\\langchain\\agents.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-017",
+    "raw": "technical\\langchain\\langchain\\event-streaming.mdx",
+    "clean": "technical\\langchain\\langchain\\event-streaming.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-015",
+    "raw": "technical\\langchain\\langchain\\human-in-the-loop.mdx",
+    "clean": "technical\\langchain\\langchain\\human-in-the-loop.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-006",
+    "raw": "technical\\langchain\\langchain\\install.mdx",
+    "clean": "technical\\langchain\\langchain\\install.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-012",
+    "raw": "technical\\langchain\\langchain\\knowledge-base.mdx",
+    "clean": "technical\\langchain\\langchain\\knowledge-base.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-018",
+    "raw": "technical\\langchain\\langchain\\mcp.mdx",
+    "clean": "technical\\langchain\\langchain\\mcp.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-009",
+    "raw": "technical\\langchain\\langchain\\messages.mdx",
+    "clean": "technical\\langchain\\langchain\\messages.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-019",
+    "raw": "technical\\langchain\\langchain\\middleware\\overview.mdx",
+    "clean": "technical\\langchain\\langchain\\middleware\\overview.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-008",
+    "raw": "technical\\langchain\\langchain\\models.mdx",
+    "clean": "technical\\langchain\\langchain\\models.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-020",
+    "raw": "technical\\langchain\\langchain\\multi-agent\\index.mdx",
+    "clean": "technical\\langchain\\langchain\\multi-agent\\index.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-021",
+    "raw": "technical\\langchain\\langchain\\multi-agent\\subagents.mdx",
+    "clean": "technical\\langchain\\langchain\\multi-agent\\subagents.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-016",
+    "raw": "technical\\langchain\\langchain\\observability.mdx",
+    "clean": "technical\\langchain\\langchain\\observability.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-004",
+    "raw": "technical\\langchain\\langchain\\overview.mdx",
+    "clean": "technical\\langchain\\langchain\\overview.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-005",
+    "raw": "technical\\langchain\\langchain\\quickstart.mdx",
+    "clean": "technical\\langchain\\langchain\\quickstart.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-011",
+    "raw": "technical\\langchain\\langchain\\retrieval.mdx",
+    "clean": "technical\\langchain\\langchain\\retrieval.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-014",
+    "raw": "technical\\langchain\\langchain\\streaming.mdx",
+    "clean": "technical\\langchain\\langchain\\streaming.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-013",
+    "raw": "technical\\langchain\\langchain\\structured-output.mdx",
+    "clean": "technical\\langchain\\langchain\\structured-output.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-022",
+    "raw": "technical\\langchain\\langchain\\test\\evals.mdx",
+    "clean": "technical\\langchain\\langchain\\test\\evals.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-010",
+    "raw": "technical\\langchain\\langchain\\tools.mdx",
+    "clean": "technical\\langchain\\langchain\\tools.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-027",
+    "raw": "technical\\langchain\\langgraph\\agentic-rag.mdx",
+    "clean": "technical\\langchain\\langgraph\\agentic-rag.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-030",
+    "raw": "technical\\langchain\\langgraph\\deploy.mdx",
+    "clean": "technical\\langchain\\langgraph\\deploy.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-026",
+    "raw": "technical\\langchain\\langgraph\\functional-api.mdx",
+    "clean": "technical\\langchain\\langgraph\\functional-api.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-025",
+    "raw": "technical\\langchain\\langgraph\\graph-api.mdx",
+    "clean": "technical\\langchain\\langgraph\\graph-api.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-023",
+    "raw": "technical\\langchain\\langgraph\\overview.mdx",
+    "clean": "technical\\langchain\\langgraph\\overview.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-028",
+    "raw": "technical\\langchain\\langgraph\\persistence.mdx",
+    "clean": "technical\\langchain\\langgraph\\persistence.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-024",
+    "raw": "technical\\langchain\\langgraph\\quickstart.mdx",
+    "clean": "technical\\langchain\\langgraph\\quickstart.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-LANGCHAIN-029",
+    "raw": "technical\\langchain\\langgraph\\streaming.mdx",
+    "clean": "technical\\langchain\\langgraph\\streaming.md",
+    "issues": [
+      "MDX 转 Markdown：移除 frontmatter 与 JSX 组件标签"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-041",
+    "raw": "technical\\postgresql\\auth-pg-hba-conf.md",
+    "clean": "technical\\postgresql\\auth-pg-hba-conf.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-033",
+    "raw": "technical\\postgresql\\backup.md",
+    "clean": "technical\\postgresql\\backup.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-040",
+    "raw": "technical\\postgresql\\client-authentication.md",
+    "clean": "technical\\postgresql\\client-authentication.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-008",
+    "raw": "technical\\postgresql\\ddl-basics.md",
+    "clean": "technical\\postgresql\\ddl-basics.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-009",
+    "raw": "technical\\postgresql\\ddl-constraints.md",
+    "clean": "technical\\postgresql\\ddl-constraints.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-010",
+    "raw": "technical\\postgresql\\ddl-partitioning.md",
+    "clean": "technical\\postgresql\\ddl-partitioning.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-007",
+    "raw": "technical\\postgresql\\ddl.md",
+    "clean": "technical\\postgresql\\ddl.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-028",
+    "raw": "technical\\postgresql\\functions-aggregate.md",
+    "clean": "technical\\postgresql\\functions-aggregate.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-027",
+    "raw": "technical\\postgresql\\functions-datetime.md",
+    "clean": "technical\\postgresql\\functions-datetime.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-026",
+    "raw": "technical\\postgresql\\functions-string.md",
+    "clean": "technical\\postgresql\\functions-string.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-029",
+    "raw": "technical\\postgresql\\functions-window.md",
+    "clean": "technical\\postgresql\\functions-window.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-036",
+    "raw": "technical\\postgresql\\high-availability.md",
+    "clean": "technical\\postgresql\\high-availability.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-025",
+    "raw": "technical\\postgresql\\indexes-ordering.md",
+    "clean": "technical\\postgresql\\indexes-ordering.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-024",
+    "raw": "technical\\postgresql\\indexes-types.md",
+    "clean": "technical\\postgresql\\indexes-types.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-023",
+    "raw": "technical\\postgresql\\indexes.md",
+    "clean": "technical\\postgresql\\indexes.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-035",
+    "raw": "technical\\postgresql\\logical-replication.md",
+    "clean": "technical\\postgresql\\logical-replication.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-037",
+    "raw": "technical\\postgresql\\monitoring.md",
+    "clean": "technical\\postgresql\\monitoring.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-031",
+    "raw": "technical\\postgresql\\mvcc.md",
+    "clean": "technical\\postgresql\\mvcc.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-039",
+    "raw": "technical\\postgresql\\performance-tips.md",
+    "clean": "technical\\postgresql\\performance-tips.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-015",
+    "raw": "technical\\postgresql\\queries-limit.md",
+    "clean": "technical\\postgresql\\queries-limit.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-012",
+    "raw": "technical\\postgresql\\queries-select-lists.md",
+    "clean": "technical\\postgresql\\queries-select-lists.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-013",
+    "raw": "technical\\postgresql\\queries-table-expressions.md",
+    "clean": "technical\\postgresql\\queries-table-expressions.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-014",
+    "raw": "technical\\postgresql\\queries-with.md",
+    "clean": "technical\\postgresql\\queries-with.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-011",
+    "raw": "technical\\postgresql\\queries.md",
+    "clean": "technical\\postgresql\\queries.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-032",
+    "raw": "technical\\postgresql\\routine-vacuuming.md",
+    "clean": "technical\\postgresql\\routine-vacuuming.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-038",
+    "raw": "technical\\postgresql\\runtime-config-resource.md",
+    "clean": "technical\\postgresql\\runtime-config-resource.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-022",
+    "raw": "technical\\postgresql\\sql-altertable.md",
+    "clean": "technical\\postgresql\\sql-altertable.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-020",
+    "raw": "technical\\postgresql\\sql-createindex.md",
+    "clean": "technical\\postgresql\\sql-createindex.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-021",
+    "raw": "technical\\postgresql\\sql-createtable.md",
+    "clean": "technical\\postgresql\\sql-createtable.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-019",
+    "raw": "technical\\postgresql\\sql-delete.md",
+    "clean": "technical\\postgresql\\sql-delete.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-017",
+    "raw": "technical\\postgresql\\sql-insert.md",
+    "clean": "technical\\postgresql\\sql-insert.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-016",
+    "raw": "technical\\postgresql\\sql-select.md",
+    "clean": "technical\\postgresql\\sql-select.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-018",
+    "raw": "technical\\postgresql\\sql-update.md",
+    "clean": "technical\\postgresql\\sql-update.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-030",
+    "raw": "technical\\postgresql\\transactions.md",
+    "clean": "technical\\postgresql\\transactions.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-005",
+    "raw": "technical\\postgresql\\tutorial-advanced.md",
+    "clean": "technical\\postgresql\\tutorial-advanced.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-002",
+    "raw": "technical\\postgresql\\tutorial-createdb.md",
+    "clean": "technical\\postgresql\\tutorial-createdb.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-004",
+    "raw": "technical\\postgresql\\tutorial-join.md",
+    "clean": "technical\\postgresql\\tutorial-join.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-003",
+    "raw": "technical\\postgresql\\tutorial-select.md",
+    "clean": "technical\\postgresql\\tutorial-select.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-006",
+    "raw": "technical\\postgresql\\tutorial-window.md",
+    "clean": "technical\\postgresql\\tutorial-window.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-001",
+    "raw": "technical\\postgresql\\tutorial.md",
+    "clean": "technical\\postgresql\\tutorial.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-POSTGRESQL-034",
+    "raw": "technical\\postgresql\\wal.md",
+    "clean": "technical\\postgresql\\wal.md",
+    "issues": [
+      "PostgreSQL 页面：移除 Table of Contents"
+    ]
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-012",
+    "raw": "technical\\redis\\docs\\connect\\cli.md",
+    "clean": "technical\\redis\\docs\\connect\\cli.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-015",
+    "raw": "technical\\redis\\docs\\connect\\clients\\go.md",
+    "clean": "technical\\redis\\docs\\connect\\clients\\go.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-014",
+    "raw": "technical\\redis\\docs\\connect\\clients\\java\\lettuce.md",
+    "clean": "technical\\redis\\docs\\connect\\clients\\java\\lettuce.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-013",
+    "raw": "technical\\redis\\docs\\connect\\clients\\python.md",
+    "clean": "technical\\redis\\docs\\connect\\clients\\python.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-010",
+    "raw": "technical\\redis\\docs\\data-types\\bitfields.md",
+    "clean": "technical\\redis\\docs\\data-types\\bitfields.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-009",
+    "raw": "technical\\redis\\docs\\data-types\\bitmaps.md",
+    "clean": "technical\\redis\\docs\\data-types\\bitmaps.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-011",
+    "raw": "technical\\redis\\docs\\data-types\\geospatial.md",
+    "clean": "technical\\redis\\docs\\data-types\\geospatial.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-006",
+    "raw": "technical\\redis\\docs\\data-types\\hashes.md",
+    "clean": "technical\\redis\\docs\\data-types\\hashes.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-004",
+    "raw": "technical\\redis\\docs\\data-types\\lists.md",
+    "clean": "technical\\redis\\docs\\data-types\\lists.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-005",
+    "raw": "technical\\redis\\docs\\data-types\\sets.md",
+    "clean": "technical\\redis\\docs\\data-types\\sets.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-007",
+    "raw": "technical\\redis\\docs\\data-types\\sorted-sets.md",
+    "clean": "technical\\redis\\docs\\data-types\\sorted-sets.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-008",
+    "raw": "technical\\redis\\docs\\data-types\\streams.md",
+    "clean": "technical\\redis\\docs\\data-types\\streams.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-003",
+    "raw": "technical\\redis\\docs\\data-types\\strings.md",
+    "clean": "technical\\redis\\docs\\data-types\\strings.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-001",
+    "raw": "technical\\redis\\docs\\get-started\\data-store.md",
+    "clean": "technical\\redis\\docs\\get-started\\data-store.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-002",
+    "raw": "technical\\redis\\docs\\get-started\\faq.md",
+    "clean": "technical\\redis\\docs\\get-started\\faq.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-018",
+    "raw": "technical\\redis\\docs\\interact\\programmability\\eval-intro.md",
+    "clean": "technical\\redis\\docs\\interact\\programmability\\eval-intro.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-019",
+    "raw": "technical\\redis\\docs\\interact\\programmability\\functions-intro.md",
+    "clean": "technical\\redis\\docs\\interact\\programmability\\functions-intro.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-020",
+    "raw": "technical\\redis\\docs\\interact\\programmability\\lua-api.md",
+    "clean": "technical\\redis\\docs\\interact\\programmability\\lua-api.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-017",
+    "raw": "technical\\redis\\docs\\interact\\pubsub.md",
+    "clean": "technical\\redis\\docs\\interact\\pubsub.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-016",
+    "raw": "technical\\redis\\docs\\interact\\transactions.md",
+    "clean": "technical\\redis\\docs\\interact\\transactions.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-033",
+    "raw": "technical\\redis\\docs\\management\\config.md",
+    "clean": "technical\\redis\\docs\\management\\config.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-032",
+    "raw": "technical\\redis\\docs\\management\\optimization\\latency.md",
+    "clean": "technical\\redis\\docs\\management\\optimization\\latency.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-031",
+    "raw": "technical\\redis\\docs\\management\\optimization\\memory-optimization.md",
+    "clean": "technical\\redis\\docs\\management\\optimization\\memory-optimization.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-026",
+    "raw": "technical\\redis\\docs\\management\\persistence.md",
+    "clean": "technical\\redis\\docs\\management\\persistence.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-027",
+    "raw": "technical\\redis\\docs\\management\\replication.md",
+    "clean": "technical\\redis\\docs\\management\\replication.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-029",
+    "raw": "technical\\redis\\docs\\management\\security\\acl.md",
+    "clean": "technical\\redis\\docs\\management\\security\\acl.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-030",
+    "raw": "technical\\redis\\docs\\management\\security\\encryption.md",
+    "clean": "technical\\redis\\docs\\management\\security\\encryption.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-028",
+    "raw": "technical\\redis\\docs\\management\\sentinel.md",
+    "clean": "technical\\redis\\docs\\management\\sentinel.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-023",
+    "raw": "technical\\redis\\docs\\manual\\client-side-caching.md",
+    "clean": "technical\\redis\\docs\\manual\\client-side-caching.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-022",
+    "raw": "technical\\redis\\docs\\manual\\keyspace-notifications.md",
+    "clean": "technical\\redis\\docs\\manual\\keyspace-notifications.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-021",
+    "raw": "technical\\redis\\docs\\manual\\keyspace.md",
+    "clean": "technical\\redis\\docs\\manual\\keyspace.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-024",
+    "raw": "technical\\redis\\docs\\manual\\patterns\\distributed-locks.md",
+    "clean": "technical\\redis\\docs\\manual\\patterns\\distributed-locks.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-025",
+    "raw": "technical\\redis\\docs\\manual\\pipelining\\index.md",
+    "clean": "technical\\redis\\docs\\manual\\pipelining\\index.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-036",
+    "raw": "technical\\redis\\docs\\reference\\cluster-spec.md",
+    "clean": "technical\\redis\\docs\\reference\\cluster-spec.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-035",
+    "raw": "technical\\redis\\docs\\reference\\eviction\\index.md",
+    "clean": "technical\\redis\\docs\\reference\\eviction\\index.md",
+    "issues": []
+  },
+  {
+    "doc_id": "YQ-TECH-REDIS-034",
+    "raw": "technical\\redis\\docs\\reference\\protocol-spec.md",
+    "clean": "technical\\redis\\docs\\reference\\protocol-spec.md",
+    "issues": []
+  }
+]

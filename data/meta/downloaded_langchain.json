@@ -1,0 +1,163 @@
+{
+  "project": "langchain",
+  "repo": "langchain-ai/docs",
+  "ref": "main",
+  "commit": "",
+  "license": "MIT",
+  "license_url": "https://github.com/langchain-ai/docs/blob/main/LICENSE",
+  "updated_at": "",
+  "download_date": "2026-08-18",
+  "source_base": "https://github.com/langchain-ai/docs/tree/main",
+  "files": [
+    {
+      "filename": "concepts/context.mdx",
+      "source_path": "src/oss/concepts/context.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/concepts/context.mdx"
+    },
+    {
+      "filename": "concepts/memory.mdx",
+      "source_path": "src/oss/concepts/memory.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/concepts/memory.mdx"
+    },
+    {
+      "filename": "concepts/providers-and-models.mdx",
+      "source_path": "src/oss/concepts/providers-and-models.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/concepts/providers-and-models.mdx"
+    },
+    {
+      "filename": "langchain/overview.mdx",
+      "source_path": "src/oss/langchain/overview.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/overview.mdx"
+    },
+    {
+      "filename": "langchain/quickstart.mdx",
+      "source_path": "src/oss/langchain/quickstart.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/quickstart.mdx"
+    },
+    {
+      "filename": "langchain/install.mdx",
+      "source_path": "src/oss/langchain/install.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/install.mdx"
+    },
+    {
+      "filename": "langchain/agents.mdx",
+      "source_path": "src/oss/langchain/agents.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/agents.mdx"
+    },
+    {
+      "filename": "langchain/models.mdx",
+      "source_path": "src/oss/langchain/models.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/models.mdx"
+    },
+    {
+      "filename": "langchain/messages.mdx",
+      "source_path": "src/oss/langchain/messages.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/messages.mdx"
+    },
+    {
+      "filename": "langchain/tools.mdx",
+      "source_path": "src/oss/langchain/tools.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/tools.mdx"
+    },
+    {
+      "filename": "langchain/retrieval.mdx",
+      "source_path": "src/oss/langchain/retrieval.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/retrieval.mdx"
+    },
+    {
+      "filename": "langchain/knowledge-base.mdx",
+      "source_path": "src/oss/langchain/knowledge-base.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/knowledge-base.mdx"
+    },
+    {
+      "filename": "langchain/structured-output.mdx",
+      "source_path": "src/oss/langchain/structured-output.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/structured-output.mdx"
+    },
+    {
+      "filename": "langchain/streaming.mdx",
+      "source_path": "src/oss/langchain/streaming.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/streaming.mdx"
+    },
+    {
+      "filename": "langchain/human-in-the-loop.mdx",
+      "source_path": "src/oss/langchain/human-in-the-loop.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/human-in-the-loop.mdx"
+    },
+    {
+      "filename": "langchain/observability.mdx",
+      "source_path": "src/oss/langchain/observability.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/observability.mdx"
+    },
+    {
+      "filename": "langchain/event-streaming.mdx",
+      "source_path": "src/oss/langchain/event-streaming.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/event-streaming.mdx"
+    },
+    {
+      "filename": "langchain/mcp.mdx",
+      "source_path": "src/oss/langchain/mcp.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/mcp.mdx"
+    },
+    {
+      "filename": "langchain/middleware/overview.mdx",
+      "source_path": "src/oss/langchain/middleware/overview.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/middleware/overview.mdx"
+    },
+    {
+      "filename": "langchain/multi-agent/index.mdx",
+      "source_path": "src/oss/langchain/multi-agent/index.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/multi-agent/index.mdx"
+    },
+    {
+      "filename": "langchain/multi-agent/subagents.mdx",
+      "source_path": "src/oss/langchain/multi-agent/subagents.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/multi-agent/subagents.mdx"
+    },
+    {
+      "filename": "langchain/test/evals.mdx",
+      "source_path": "src/oss/langchain/test/evals.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langchain/test/evals.mdx"
+    },
+    {
+      "filename": "langgraph/overview.mdx",
+      "source_path": "src/oss/langgraph/overview.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/overview.mdx"
+    },
+    {
+      "filename": "langgraph/quickstart.mdx",
+      "source_path": "src/oss/langgraph/quickstart.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/quickstart.mdx"
+    },
+    {
+      "filename": "langgraph/graph-api.mdx",
+      "source_path": "src/oss/langgraph/graph-api.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/graph-api.mdx"
+    },
+    {
+      "filename": "langgraph/functional-api.mdx",
+      "source_path": "src/oss/langgraph/functional-api.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/functional-api.mdx"
+    },
+    {
+      "filename": "langgraph/agentic-rag.mdx",
+      "source_path": "src/oss/langgraph/agentic-rag.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/agentic-rag.mdx"
+    },
+    {
+      "filename": "langgraph/persistence.mdx",
+      "source_path": "src/oss/langgraph/persistence.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/persistence.mdx"
+    },
+    {
+      "filename": "langgraph/streaming.mdx",
+      "source_path": "src/oss/langgraph/streaming.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/streaming.mdx"
+    },
+    {
+      "filename": "langgraph/deploy.mdx",
+      "source_path": "src/oss/langgraph/deploy.mdx",
+      "source_url": "https://github.com/langchain-ai/docs/blob/main/src/oss/langgraph/deploy.mdx"
+    }
+  ]
+}

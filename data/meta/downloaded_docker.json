@@ -1,0 +1,203 @@
+{
+  "project": "docker",
+  "repo": "docker/docs",
+  "ref": "main",
+  "commit": "f3f734abe79fa3f19600b1d18f0c91b2727845a4",
+  "license": "Apache-2.0",
+  "license_url": "",
+  "updated_at": "2026-08-18T13:52:53Z",
+  "download_date": "2026-08-18",
+  "source_base": "https://github.com/docker/docs/tree/main",
+  "files": [
+    {
+      "filename": "get-started/docker-overview.md",
+      "source_path": "content/get-started/docker-overview.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-overview.md"
+    },
+    {
+      "filename": "get-started/get-docker.md",
+      "source_path": "content/get-started/get-docker.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/get-docker.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/the-basics/what-is-a-container.md",
+      "source_path": "content/get-started/docker-concepts/the-basics/what-is-a-container.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-container.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/the-basics/what-is-an-image.md",
+      "source_path": "content/get-started/docker-concepts/the-basics/what-is-an-image.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-an-image.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/the-basics/what-is-a-registry.md",
+      "source_path": "content/get-started/docker-concepts/the-basics/what-is-a-registry.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-a-registry.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/the-basics/what-is-docker-compose.md",
+      "source_path": "content/get-started/docker-concepts/the-basics/what-is-docker-compose.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/the-basics/what-is-docker-compose.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/building-images/writing-a-dockerfile.md",
+      "source_path": "content/get-started/docker-concepts/building-images/writing-a-dockerfile.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/writing-a-dockerfile.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/building-images/multi-stage-builds.md",
+      "source_path": "content/get-started/docker-concepts/building-images/multi-stage-builds.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/multi-stage-builds.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/building-images/using-the-build-cache.md",
+      "source_path": "content/get-started/docker-concepts/building-images/using-the-build-cache.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/using-the-build-cache.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/building-images/understanding-image-layers.md",
+      "source_path": "content/get-started/docker-concepts/building-images/understanding-image-layers.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/understanding-image-layers.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md",
+      "source_path": "content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/building-images/build-tag-and-publish-an-image.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/running-containers/publishing-ports.md",
+      "source_path": "content/get-started/docker-concepts/running-containers/publishing-ports.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/publishing-ports.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/running-containers/persisting-container-data.md",
+      "source_path": "content/get-started/docker-concepts/running-containers/persisting-container-data.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/persisting-container-data.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/running-containers/sharing-local-files.md",
+      "source_path": "content/get-started/docker-concepts/running-containers/sharing-local-files.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/sharing-local-files.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/running-containers/overriding-container-defaults.md",
+      "source_path": "content/get-started/docker-concepts/running-containers/overriding-container-defaults.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/overriding-container-defaults.md"
+    },
+    {
+      "filename": "get-started/docker-concepts/running-containers/multi-container-applications.md",
+      "source_path": "content/get-started/docker-concepts/running-containers/multi-container-applications.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/docker-concepts/running-containers/multi-container-applications.md"
+    },
+    {
+      "filename": "get-started/introduction/build-and-push-first-image.md",
+      "source_path": "content/get-started/introduction/build-and-push-first-image.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/introduction/build-and-push-first-image.md"
+    },
+    {
+      "filename": "get-started/introduction/develop-with-containers.md",
+      "source_path": "content/get-started/introduction/develop-with-containers.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/introduction/develop-with-containers.md"
+    },
+    {
+      "filename": "get-started/introduction/get-docker-desktop.md",
+      "source_path": "content/get-started/introduction/get-docker-desktop.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/introduction/get-docker-desktop.md"
+    },
+    {
+      "filename": "get-started/workshop/02_our_app.md",
+      "source_path": "content/get-started/workshop/02_our_app.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/02_our_app.md"
+    },
+    {
+      "filename": "get-started/workshop/05_persisting_data.md",
+      "source_path": "content/get-started/workshop/05_persisting_data.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/05_persisting_data.md"
+    },
+    {
+      "filename": "get-started/workshop/06_bind_mounts.md",
+      "source_path": "content/get-started/workshop/06_bind_mounts.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/06_bind_mounts.md"
+    },
+    {
+      "filename": "get-started/workshop/07_multi_container.md",
+      "source_path": "content/get-started/workshop/07_multi_container.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/07_multi_container.md"
+    },
+    {
+      "filename": "get-started/workshop/08_using_compose.md",
+      "source_path": "content/get-started/workshop/08_using_compose.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/08_using_compose.md"
+    },
+    {
+      "filename": "get-started/workshop/09_image_best.md",
+      "source_path": "content/get-started/workshop/09_image_best.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/get-started/workshop/09_image_best.md"
+    },
+    {
+      "filename": "guides/docker-compose.md",
+      "source_path": "content/guides/docker-compose.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/docker-compose.md"
+    },
+    {
+      "filename": "guides/compose-bake.md",
+      "source_path": "content/guides/compose-bake.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/compose-bake.md"
+    },
+    {
+      "filename": "guides/databases.md",
+      "source_path": "content/guides/databases.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/databases.md"
+    },
+    {
+      "filename": "guides/kafka.md",
+      "source_path": "content/guides/kafka.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/kafka.md"
+    },
+    {
+      "filename": "guides/go-prometheus-monitoring.md",
+      "source_path": "content/guides/go-prometheus-monitoring.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/go-prometheus-monitoring.md"
+    },
+    {
+      "filename": "guides/django.md",
+      "source_path": "content/guides/django.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/django.md"
+    },
+    {
+      "filename": "guides/docker-scout.md",
+      "source_path": "content/guides/docker-scout.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/docker-scout.md"
+    },
+    {
+      "filename": "guides/kube-deploy.md",
+      "source_path": "content/guides/kube-deploy.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/kube-deploy.md"
+    },
+    {
+      "filename": "guides/bake.md",
+      "source_path": "content/guides/bake.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/bake.md"
+    },
+    {
+      "filename": "guides/gha.md",
+      "source_path": "content/guides/gha.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/gha.md"
+    },
+    {
+      "filename": "guides/azure-pipelines.md",
+      "source_path": "content/guides/azure-pipelines.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/azure-pipelines.md"
+    },
+    {
+      "filename": "guides/container-supported-development.md",
+      "source_path": "content/guides/container-supported-development.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/container-supported-development.md"
+    },
+    {
+      "filename": "guides/agentic-ai.md",
+      "source_path": "content/guides/agentic-ai.md",
+      "source_url": "https://github.com/docker/docs/blob/main/content/guides/agentic-ai.md"
+    }
+  ]
+}

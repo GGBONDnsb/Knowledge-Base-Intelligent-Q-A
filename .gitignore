@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+*.local
+
+# 环境变量与数据库
+backend/.env
+backend/knowledge.db
+backend/data/uploads/
+
+# IDE
+.idea/
+.vscode/
+.vs/
+
+# 操作系统
+Thumbs.db
+.DS_Store
+
+# 日志
+*.log
