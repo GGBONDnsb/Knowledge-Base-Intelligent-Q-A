@@ -1,26 +1,38 @@
 # 企业智能知识库问答系统
 
-一个面向中小企业的知识库问答系统，帮助员工通过自然语言查询制度、产品资料和技术文档。项目基于 RAG 思路实现，第一版使用 BM25 中文检索和 DeepSeek 大模型生成回答，所有答案都带来源引用，无法回答时明确拒答。
+一个面向中小企业的知识库问答系统，帮助员工通过自然语言查询制度、产品资料和技术文档。项目基于 RAG 思路实现，检索链路包含 BM25 关键词检索、本地向量检索和 BGE Rerank 精排，由 DeepSeek 生成带来源引用的回答，无法回答时明确拒答。
 
-本项目同时作为个人求职作品，覆盖数据管道、检索、生成、文档管理、前端界面和自动化测试。
+本项目同时作为个人求职作品，覆盖数据管道、检索、生成、文档管理、权限过滤、前端界面、自动化测试和评测体系。
 
 ## 核心功能
 
 - 本地运行，不依赖 Docker 和 GPU。
 - 导入 233 份清洗后的制度、产品、技术文档。
-- BM25 中文检索，快速定位相关文本块。
+- BM25 + 向量 + BGE Rerank 混合检索。
 - DeepSeek 生成带引用回答，支持拒答。
+- 员工 / 管理员角色权限过滤。
 - 网页上传 Markdown、TXT、HTML 文档。
 - 文档列表、删除、重建索引。
 - 问答日志和统计接口。
+- 50 道评测题与 Hit@5 报告。
 - pytest 自动化测试。
+
+## 评测结果
+
+| 方案 | 整体 Hit@5 | 制度类 | 产品类 | 技术类 |
+| --- | --- | --- | --- | --- |
+| BM25 | 82.0% | 100% | 93.8% | 50.0% |
+| BM25 + 向量混合 | 86.0% | 94.4% | 100% | 62.5% |
+| 混合 + BGE Rerank | 90.0% | 100% | 100% | 68.8% |
+
+评测题目和脚本位于 `backend/eval`，报告见 `report_bm25.md` 与 `report_hybrid.md`。
 
 ## 技术栈
 
 | 模块 | 技术 |
 | --- | --- |
 | 后端 | FastAPI、SQLAlchemy、SQLite |
-| 检索 | jieba 分词、BM25 倒排索引 |
+| 检索 | jieba 分词、BM25、fastembed 向量、BGE Rerank ONNX |
 | 模型 | DeepSeek chat API |
 | 前端 | React、Vite、TypeScript、Ant Design |
 | 测试 | pytest、httpx |
@@ -36,16 +48,18 @@
 │   │   ├── database.py        # SQLite 连接
 │   │   ├── models.py          # 数据表定义
 │   │   ├── ingest.py          # 数据导入与切块
-│   │   ├── retrieval.py       # BM25 检索
+│   │   ├── retrieval.py       # BM25 + 向量 + Rerank 检索
+│   │   ├── reranker.py        # BGE Rerank
 │   │   ├── llm.py             # DeepSeek 调用
 │   │   ├── documents_api.py   # 文档管理接口
 │   │   └── schemas.py         # 接口数据结构
+│   ├── eval/                  # 评测题目、脚本、报告
 │   ├── tests/                 # pytest 测试
 │   ├── requirements.txt
 │   └── .env.example
 ├── frontend/
 │   └── src/
-│       ├── pages/ChatPage.tsx       # 问答页
+│       ├── pages/ChatPage.tsx       # 问答页，含角色切换
 │       ├── pages/DocumentsPage.tsx  # 文档管理页
 │       └── api.ts                   # 后端 API 封装
 ├── data/
@@ -98,7 +112,7 @@ python -m app.ingest
 uvicorn app.main:app --reload --port 8000
 ```
 
-接口文档地址：`http://127.0.0.1:8000/docs`
+首次启动会自动下载向量模型和 BGE Rerank 模型，之后会使用本地缓存。接口文档地址：`http://127.0.0.1:8000/docs`
 
 ### 2. 启动前端
 
@@ -112,6 +126,12 @@ npm run dev
 
 前端开发服务器会把 `/api` 请求代理到 `http://127.0.0.1:8000`。
 
+### 3. 权限说明
+
+- 问答页可切换“员工 / 管理员”角色。
+- 员工只能检索“全员”权限的文档。
+- 管理员可以检索全部文档。
+
 ## 接口一览
 
 | 方法 | 路径 | 说明 |
@@ -124,6 +144,15 @@ npm run dev
 | POST | /api/documents/reindex | 重建检索索引 |
 | GET | /api/stats | 统计数据 |
 
+`/api/chat` 请求体：
+
+```json
+{
+  "question": "年假怎么休",
+  "role": "employee"
+}
+```
+
 ## 测试
 
 ```bash
@@ -132,6 +161,14 @@ python -m pytest -q
 ```
 
 测试使用独立的临时数据库，不会影响本地 `knowledge.db`。
+
+## 评测
+
+```bash
+cd backend
+python -m eval.run_eval bm25
+python -m eval.run_eval hybrid
+```
 
 ## 数据说明
 
@@ -142,10 +179,9 @@ python -m pytest -q
 
 ## 后续规划
 
-- BGE 向量检索、混合检索和 Rerank。
 - PostgreSQL + pgvector。
-- 登录与部门权限过滤。
-- 评测集和指标报表。
+- 更细粒度的部门权限。
+- 评测集扩充与指标报表。
 - Docker Compose 一键部署。
 
 ## 常见问题
