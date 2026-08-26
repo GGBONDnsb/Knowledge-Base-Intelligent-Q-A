@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class ChatRequest(BaseModel):
     question: str
+    role: str = "employee"
 
 
 class Citation(BaseModel):

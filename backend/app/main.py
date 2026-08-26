@@ -48,7 +48,7 @@ def chat(payload: ChatRequest):
             detail="未配置 DEEPSEEK_API_KEY，请在 backend/.env 中填写",
         )
 
-    chunks = retrieval.search(question, top_k=5)
+    chunks = retrieval.search(question, top_k=5, role=payload.role)
     if not chunks:
         _log_chat(question, "", True)
         return ChatResponse(

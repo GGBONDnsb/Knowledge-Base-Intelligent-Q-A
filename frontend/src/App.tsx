@@ -8,6 +8,7 @@ const { Header, Content, Sider } = Layout
 
 export default function App() {
   const [active, setActive] = useState('chat')
+  const [role, setRole] = useState<'employee' | 'admin'>('employee')
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -30,7 +31,11 @@ export default function App() {
           />
         </Sider>
         <Content style={{ padding: 24 }}>
-          {active === 'chat' ? <ChatPage /> : <DocumentsPage />}
+          {active === 'chat' ? (
+            <ChatPage role={role} onRoleChange={setRole} />
+          ) : (
+            <DocumentsPage />
+          )}
         </Content>
       </Layout>
     </Layout>

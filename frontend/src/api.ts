@@ -51,10 +51,10 @@ async function request<T>(url: string, init?: RequestInit): Promise<T> {
   return res.json() as Promise<T>
 }
 
-export function chat(question: string): Promise<ChatResponse> {
+export function chat(question: string, role: string = 'employee'): Promise<ChatResponse> {
   return request('/api/chat', {
     method: 'POST',
-    body: JSON.stringify({ question })
+    body: JSON.stringify({ question, role })
   })
 }
 

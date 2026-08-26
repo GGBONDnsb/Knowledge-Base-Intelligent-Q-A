@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Alert, Button, Collapse, Empty, Input, Space, Tag, Typography, message } from 'antd'
+import { Alert, Button, Collapse, Empty, Input, Segmented, Space, Tag, Typography, message } from 'antd'
 import { SendOutlined } from '@ant-design/icons'
 import { Citation, chat } from '../api'
 
@@ -10,9 +10,14 @@ interface MessageItem {
   refused?: boolean
 }
 
+interface ChatPageProps {
+  role: 'employee' | 'admin'
+  onRoleChange: (value: 'employee' | 'admin') => void
+}
+
 const SAMPLES = ['年假怎么休', 'API 网关限流怎么配置', 'Docker 容器是什么']
 
-export default function ChatPage() {
+export default function ChatPage({ role, onRoleChange }: ChatPageProps) {
   const [messages, setMessages] = useState<MessageItem[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
@@ -29,7 +34,7 @@ export default function ChatPage() {
     setMessages((prev) => [...prev, { role: 'user', content: question }])
     setLoading(true)
     try {
-      const resp = await chat(question)
+      const resp = await chat(question, role)
       setMessages((prev) => [
         ...prev,
         {
@@ -58,6 +63,14 @@ export default function ChatPage() {
           </Button>
         ))}
       </Space>
+      <Segmented
+        options={[
+          { label: '员工', value: 'employee' },
+          { label: '管理员', value: 'admin' }
+        ]}
+        value={role}
+        onChange={(value) => onRoleChange(value as 'employee' | 'admin')}
+      />
       <div
         style={{
           minHeight: 420,
