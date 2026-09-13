@@ -4,6 +4,10 @@ from fastapi import FastAPI, HTTPException
 from sqlalchemy import func
 
 from app import retrieval
+from app.agent_api import router as agent_router
+from app.agent_data import ensure_demo_data
+from app.auth import ensure_demo_accounts
+from app.auth_api import router as auth_router
 from app.config import DEEPSEEK_API_KEY
 from app.database import SessionLocal, init_db
 from app.documents_api import router as documents_router
@@ -15,12 +19,20 @@ from app.schemas import ChatRequest, ChatResponse, Citation, Stats
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     init_db()
+    db = SessionLocal()
+    try:
+        ensure_demo_data(db)
+        ensure_demo_accounts(db)
+    finally:
+        db.close()
     retrieval.build_index()
     yield
 
 
 app = FastAPI(title="企业智能知识库问答系统", lifespan=lifespan)
+app.include_router(auth_router)
 app.include_router(documents_router)
+app.include_router(agent_router)
 
 
 def _log_chat(question: str, answer: str, refused: bool) -> None:

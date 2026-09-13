@@ -1,0 +1,202 @@
+[
+  {
+    "employee_id": "E001",
+    "name": "张三",
+    "department": "研发部",
+    "position": "后端工程师",
+    "work_years": 3,
+    "manager_id": "M001",
+    "department_head_id": "M001",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E002",
+    "name": "李四",
+    "department": "产品部",
+    "position": "产品经理",
+    "work_years": 12,
+    "manager_id": "M002",
+    "department_head_id": "M002",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E003",
+    "name": "王五",
+    "department": "销售部",
+    "position": "销售专员",
+    "work_years": 1,
+    "manager_id": "M003",
+    "department_head_id": "M003",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E004",
+    "name": "陈晓",
+    "department": "财务部",
+    "position": "财务专员",
+    "work_years": 6,
+    "manager_id": "M004",
+    "department_head_id": "M004",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E005",
+    "name": "周琳",
+    "department": "人力资源部",
+    "position": "HRBP",
+    "work_years": 8,
+    "manager_id": "M005",
+    "department_head_id": "M005",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E006",
+    "name": "刘洋",
+    "department": "研发部",
+    "position": "前端工程师",
+    "work_years": 4,
+    "manager_id": "M001",
+    "department_head_id": "M001",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E007",
+    "name": "赵敏",
+    "department": "产品部",
+    "position": "产品运营",
+    "work_years": 5,
+    "manager_id": "M002",
+    "department_head_id": "M002",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E008",
+    "name": "孙强",
+    "department": "销售部",
+    "position": "大客户经理",
+    "work_years": 11,
+    "manager_id": "M003",
+    "department_head_id": "M003",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E009",
+    "name": "郑爽",
+    "department": "财务部",
+    "position": "会计",
+    "work_years": 7,
+    "manager_id": "M004",
+    "department_head_id": "M004",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E010",
+    "name": "林悦",
+    "department": "市场部",
+    "position": "市场专员",
+    "work_years": 2,
+    "manager_id": "M006",
+    "department_head_id": "M006",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E011",
+    "name": "钱进",
+    "department": "研发部",
+    "position": "测试工程师",
+    "work_years": 3,
+    "manager_id": "M001",
+    "department_head_id": "M001",
+    "role": "employee"
+  },
+  {
+    "employee_id": "E012",
+    "name": "吴桐",
+    "department": "产品部",
+    "position": "UI 设计师",
+    "work_years": 6,
+    "manager_id": "M002",
+    "department_head_id": "M002",
+    "role": "employee"
+  },
+  {
+    "employee_id": "A001",
+    "name": "王敏",
+    "department": "行政部",
+    "position": "系统管理员",
+    "work_years": 6,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "admin"
+  },
+  {
+    "employee_id": "M001",
+    "name": "李明",
+    "department": "研发部",
+    "position": "研发总监",
+    "work_years": 18,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "M002",
+    "name": "王芳",
+    "department": "产品部",
+    "position": "产品总监",
+    "work_years": 15,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "M003",
+    "name": "张强",
+    "department": "销售部",
+    "position": "销售总监",
+    "work_years": 13,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "M004",
+    "name": "陈静",
+    "department": "财务部",
+    "position": "财务总监",
+    "work_years": 22,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "M005",
+    "name": "杨帆",
+    "department": "人力资源部",
+    "position": "HR 总监",
+    "work_years": 16,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "M006",
+    "name": "何军",
+    "department": "市场部",
+    "position": "市场总监",
+    "work_years": 9,
+    "manager_id": "G001",
+    "department_head_id": "G001",
+    "role": "manager"
+  },
+  {
+    "employee_id": "G001",
+    "name": "周总",
+    "department": "总经理办公室",
+    "position": "总经理",
+    "work_years": 25,
+    "manager_id": null,
+    "department_head_id": "G001",
+    "role": "manager"
+  }
+]

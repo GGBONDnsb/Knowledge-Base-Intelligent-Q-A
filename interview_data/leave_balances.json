@@ -1,0 +1,162 @@
+[
+  {
+    "employee_id": "E001",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 2,
+    "remaining_days": 3
+  },
+  {
+    "employee_id": "E002",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 5,
+    "remaining_days": 5
+  },
+  {
+    "employee_id": "E003",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 5,
+    "remaining_days": 0
+  },
+  {
+    "employee_id": "E004",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 1,
+    "remaining_days": 4
+  },
+  {
+    "employee_id": "E005",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 2,
+    "remaining_days": 3
+  },
+  {
+    "employee_id": "E006",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 0,
+    "remaining_days": 5
+  },
+  {
+    "employee_id": "E007",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 4,
+    "remaining_days": 1
+  },
+  {
+    "employee_id": "E008",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 8,
+    "remaining_days": 2
+  },
+  {
+    "employee_id": "E009",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 1,
+    "remaining_days": 4
+  },
+  {
+    "employee_id": "E010",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 0,
+    "remaining_days": 5
+  },
+  {
+    "employee_id": "E011",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 3,
+    "remaining_days": 2
+  },
+  {
+    "employee_id": "E012",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 1,
+    "remaining_days": 4
+  },
+  {
+    "employee_id": "A001",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 0,
+    "remaining_days": 5
+  },
+  {
+    "employee_id": "M001",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 7,
+    "remaining_days": 3
+  },
+  {
+    "employee_id": "M002",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 6,
+    "remaining_days": 4
+  },
+  {
+    "employee_id": "M003",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 9,
+    "remaining_days": 1
+  },
+  {
+    "employee_id": "M004",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 15,
+    "used_days": 10,
+    "remaining_days": 5
+  },
+  {
+    "employee_id": "M005",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 10,
+    "used_days": 6,
+    "remaining_days": 4
+  },
+  {
+    "employee_id": "M006",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 5,
+    "used_days": 2,
+    "remaining_days": 3
+  },
+  {
+    "employee_id": "G001",
+    "year": 2026,
+    "leave_type": "年假",
+    "total_days": 15,
+    "used_days": 10,
+    "remaining_days": 5
+  }
+]

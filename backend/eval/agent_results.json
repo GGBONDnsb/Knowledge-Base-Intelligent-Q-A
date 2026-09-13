@@ -1,0 +1,444 @@
+{
+  "generated_at": "2026-09-13T22:49:30",
+  "total": 25,
+  "passed": 25,
+  "pass_rate": 1.0,
+  "rows": [
+    {
+      "id": "A001",
+      "prompt": "张三还有多少天年假余额？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "张三（E001）2026 年年假情况：\n\n- 年假总额：5 天\n- 已使用：2 天\n- 剩余余额：3 天\n- 其中待审批申请占用：2 天\n- 当前实际可申请：1 天\n\n如需提交年假申请，告诉我日期和天数即可。",
+      "pending_action": null,
+      "elapsed_ms": 3147.7,
+      "error": ""
+    },
+    {
+      "id": "A002",
+      "prompt": "李四今年还剩几天年假？",
+      "employee_id": "E002",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "李四（E002）2026 年年假情况如下：\n\n- 年度总额：10 天\n- 已使用：5 天\n- 剩余余额：5 天\n- 待审批申请占用：5 天\n- **当前可申请：0 天**\n\n也就是说，账面上还剩 5 天，但由于有 5 天待审批申请正在占用，目前实际可再申请的额度为 0 天。如需查询具体是哪些待审批申请，我可以帮你看一下。",
+      "pending_action": null,
+      "elapsed_ms": 3411.97,
+      "error": ""
+    },
+    {
+      "id": "A003",
+      "prompt": "陈晓的 2026 年年假余额是多少？",
+      "employee_id": "E004",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "陈晓（E004）2026 年年假余额为 **4 天**（年度总额 5 天，已使用 1 天）。",
+      "pending_action": null,
+      "elapsed_ms": 2392.23,
+      "error": ""
+    },
+    {
+      "id": "A004",
+      "prompt": "公司规定年假申请需要提前几个工作日？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "search_knowledge"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "根据《年休假管理办法》第 4 条「申请与审批」的规定：\n\n- **年假申请需提前 3 个工作日提交**，通过 OA 系统办理。\n- 年假以半天为单位申请。\n- 审批权限：3 天以内由直属主管审批，3 天以上由部门负责人审批。\n\n另外，《员工考勤管理制度》也明确年假按专项制度（即《年休假管理办法》）执行，因此以「提前 3 个工作日」为准。",
+      "pending_action": null,
+      "elapsed_ms": 12844.39,
+      "error": ""
+    },
+    {
+      "id": "A005",
+      "prompt": "年假按什么单位申请？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "search_knowledge"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "根据《年休假管理办法》第 4 条「申请与审批」：\n\n- **年假以半天为单位申请**，可通过 OA 系统提交。\n- 其他相关规定：3 天以内由直属主管审批，3 天以上由部门负责人审批；申请需提前 3 个工作日提交。\n\n如需申请，请告诉我具体日期、天数和事由，我可以帮你生成待确认的申请。",
+      "pending_action": null,
+      "elapsed_ms": 3742.09,
+      "error": ""
+    },
+    {
+      "id": "A006",
+      "prompt": "远程办公申请流程是什么？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "search_knowledge"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "根据《远程办公管理办法》知识库内容，远程办公申请流程如下：\n\n**1. 提交申请**\n- 员工需**提前 3 个工作日**提交远程办公申请；\n- 申请中需说明：**远程周期、任务安排、联系方式**。\n\n**2. 审批权限**\n- 远程 **3 天以内**：由**直属主管**审批；\n- 远程 **超过 3 天**：由**部门负责人**审批。\n\n**3. 适用范围与限制**\n- 适用于经审批的**临时远程办公**和**定期远程办公岗位**；\n- **需要现场协作的岗位**、**试用期前 1 个月的员工**，原则上不安排长期远程办公。\n\n**4. 远程期间要求**\n- 保持企业 IM 在线，每日按部门规定同步工作进展；\n- 会议、评审等需实时参与的活动应按时参加，缺席按考勤制度处理；\n- 工作成果以项目交付为准，不以在线时长代替产出。\n\n如需我协助提交请假或其他申请，请告诉我具体信息。",
+      "pending_action": null,
+      "elapsed_ms": 3512.83,
+      "error": ""
+    },
+    {
+      "id": "A007",
+      "prompt": "API 网关限流参数有哪些？",
+      "employee_id": "E002",
+      "role": "admin",
+      "tools_used": [
+        "search_knowledge",
+        "search_knowledge"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "根据知识库检索结果，云启 API 网关的限流相关参数如下：\n\n**1. 限流核心参数**\n- `scope`：限流范围，支持按**路由**、**消费者（consumer）**或**客户端 IP** 配置\n- `qps`：每秒请求数上限\n- `burst`：突发流量上限（示例中 qps 50 / burst 100）\n\n配置示例（按消费者限流，每应用每秒 50 次、突发 100 次）：\n```yaml\nrate_limit:\n  scope: consumer\n  qps: 50\n  burst: 100\n```\n\n**2. 并发与熔断**\n- 限流策略支持配置 **QPS** 和**并发**两个维度\n- 熔断策略参数：**错误率阈值**、**熔断持续时间**、**恢复窗口**\n\n**3. 超限处理与统计方式**\n- 超限返回 **429**，并附带 **Retry-After** 头（重试时间提示），客户端应做退避重试\n- 默认**单节点统计**；集群限流需启用**分布式限流组件**（v2.8 起新增分布式限流与配额管理）\n\n如需某个具体场景（如按路由或按 IP）的完整配置示例，可以告诉我，我再帮你检索。",
+      "pending_action": null,
+      "elapsed_ms": 6691.99,
+      "error": ""
+    },
+    {
+      "id": "A008",
+      "prompt": "云启容器平台支持哪些部署方式？",
+      "employee_id": "E002",
+      "role": "employee",
+      "tools_used": [
+        "search_knowledge",
+        "search_knowledge",
+        "search_knowledge"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "根据知识库中的《云启容器平台产品介绍》（文档编号 YQ-PROD-016，v1.4）\"4. 架构与部署\"章节，云启容器平台的部署方式如下：\n\n**部署模式**\n- 单控制面部署\n- 高可用控制面部署\n- 多集群联邦部署\n\n**运行环境**\n- 与主流云厂商兼容\n- 也可部署在物理机或虚拟化环境中\n\n**架构说明**：控制面负责调度和 API，数据面运行工作负载，支持多集群纳管。\n\n补充说明：知识库中另有一份《云启低代码平台 FAQ》提到支持 Docker Compose、Kubernetes 集群和 SaaS 托管版本，但那是**低代码平台**的部署方式，与容器平台不是同一产品，请勿混淆。\n\n如需针对某一种部署模式的详细要求（如高可用控制面的节点配置），可以告诉我，我再帮你检索。",
+      "pending_action": null,
+      "elapsed_ms": 6553.71,
+      "error": ""
+    },
+    {
+      "id": "A009",
+      "prompt": "帮我申请 9 月 21 日到 9 月 22 日的 2 天年假，事由是家庭安排。",
+      "employee_id": "E006",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance",
+        "submit_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为你生成待确认的请假申请（尚未写入系统）：\n\n- 申请人：刘洋（E006，研发部）\n- 假别：年假\n- 时间：2026-09-21 至 2026-09-22，共 2 天\n- 事由：家庭安排\n- 审批人：M001\n- 当前年假余额：5 天（总额 5 天，已使用 0 天），本次申请后剩余 3 天\n\n请稍后点击确认，确认后才会正式提交。",
+      "pending_action": "ACT-80A6FBB9",
+      "elapsed_ms": 4930.26,
+      "error": ""
+    },
+    {
+      "id": "A010",
+      "prompt": "帮我直接申请 5 天年假，事由是旅行。",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "抱歉，无法为您提交 5 天年假申请，原因如下：\n\n**您的年假余额（2026 年）**\n- 年度总额：5 天\n- 已使用：2 天\n- 剩余余额：3 天\n- 待审批申请占用：2 天\n- **当前可申请：1 天**\n\n由于可申请天数仅剩 1 天，5 天的申请会超出额度，系统无法通过。\n\n另外，提交申请还需要**开始日期**和**结束日期**。请告知：\n1. 您希望调整为几天（最多 1 天）？\n2. 具体的起止日期？\n\n确认后我会为您生成待确认的申请，届时请点击确认提交。",
+      "pending_action": null,
+      "elapsed_ms": 3270.29,
+      "error": ""
+    },
+    {
+      "id": "A011",
+      "prompt": "王五还能申请几天年假？",
+      "employee_id": "E003",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "王五（E003）2026 年年假余额为 **0 天**：年度总额 5 天，已全部使用完毕，目前无可申请的年假天数。\n\n如需请假，可考虑其他假别或咨询人力资源部。",
+      "pending_action": null,
+      "elapsed_ms": 2858.25,
+      "error": ""
+    },
+    {
+      "id": "A012",
+      "prompt": "先查我的年假余额，再申请 10 月 13 日当天 1 天年假，事由是家中有事。",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance",
+        "submit_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为您生成待确认的请假申请，摘要如下：\n\n- **申请人**：张三（E001，研发部）\n- **假别**：年假\n- **时间**：2026-10-13 至 2026-10-13，共 **1 天**\n- **事由**：家中有事\n- **审批人**：M001\n\n该申请尚未写入系统，请稍后点击**确认**后才会正式提交。",
+      "pending_action": "ACT-EADE9D26",
+      "elapsed_ms": 3888.76,
+      "error": ""
+    },
+    {
+      "id": "A013",
+      "prompt": "帮我申请 9 月 21 日到 9 月 23 日的 3 天年假，事由是陪伴家人。",
+      "employee_id": "E009",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance",
+        "search_knowledge",
+        "submit_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为您生成请假申请待确认动作，摘要如下：\n\n- **申请人**：郑爽（E009，财务部）\n- **假别**：年假\n- **时间**：2026-09-21 至 2026-09-23，共 3 天\n- **事由**：陪伴家人\n- **审批人**：M004\n- **余额**：现有 4 天，申请后剩余 1 天\n\n请稍后点击确认，确认后才会正式提交并进入审批流程。",
+      "pending_action": "ACT-ACD34B72",
+      "elapsed_ms": 5139.18,
+      "error": ""
+    },
+    {
+      "id": "A014",
+      "prompt": "王五能申请 2 天年假吗？请只查余额。",
+      "employee_id": "E003",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "王五（E003）2026 年年假余额为 **0 天**（总额 5 天，已使用 5 天），因此目前**不能**申请 2 天年假。",
+      "pending_action": null,
+      "elapsed_ms": 2654.75,
+      "error": ""
+    },
+    {
+      "id": "A015",
+      "prompt": "请帮王五申请 10 月 9 日到 10 月 10 日 2 天年假，事由是旅行。",
+      "employee_id": "E003",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "王五当前 2026 年年假余额为 **0 天**（总额 5 天，已使用 5 天），因此无法申请 10 月 9 日至 10 月 10 日的 2 天年假。\n\n建议您：\n- 确认是否仍有其他可用假期类型，或\n- 取消/调整已有安排后再申请。\n\n如您仍希望我按此内容准备申请单（可能因余额不足被审批环节驳回），请告知，我再为您生成待确认动作。",
+      "pending_action": null,
+      "elapsed_ms": 3777.28,
+      "error": ""
+    },
+    {
+      "id": "A016",
+      "prompt": "查一下陈晓的余额，然后申请 10 月 12 日当天 1 天年假，事由是办私事。",
+      "employee_id": "E004",
+      "role": "employee",
+      "tools_used": [
+        "query_leave_balance",
+        "submit_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为你查询并准备好申请，详情如下：\n\n**年假余额（2026）**：4 天（总额 5 天，已使用 1 天）\n\n**待确认请假申请**\n- 申请人：陈晓（E004）\n- 假别：年假\n- 时间：2026-10-12 至 2026-10-12，共 1 天\n- 事由：办私事\n- 审批人：M004\n\n该申请尚未写入系统，请稍后点击确认后才会正式提交。",
+      "pending_action": "ACT-A5014C74",
+      "elapsed_ms": 4648.22,
+      "error": ""
+    },
+    {
+      "id": "A017",
+      "prompt": "我有哪些请假申请？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_my_leave_requests"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "张三，你目前有 1 条请假申请：\n\n| 申请编号 | 假别 | 开始日期 | 结束日期 | 天数 | 状态 | 审批人 | 提交时间 |\n|---|---|---|---|---|---|---|---|\n| LR-2026-0901 | 年假 | 2026-09-21 | 2026-09-22 | 2 天 | 待审批 | M001 | 2026-09-08 10:20 |\n\n需要我帮你做其他操作吗？",
+      "pending_action": null,
+      "elapsed_ms": 2287.73,
+      "error": ""
+    },
+    {
+      "id": "A018",
+      "prompt": "查一下我最近提交的请假申请状态。",
+      "employee_id": "E007",
+      "role": "employee",
+      "tools_used": [
+        "query_my_leave_requests"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "您最近提交的请假申请如下：\n\n| 申请编号 | 假别 | 起止日期 | 天数 | 状态 | 审批人 | 提交时间 |\n|---|---|---|---|---|---|---|\n| LR-2026-0902 | 年假 | 2026-09-24 至 2026-09-25 | 2 天 | 待审批 | M002 | 2026-09-08 14:05 |\n\n目前该申请仍在待审批状态，审批人为 M002。需要我帮您做其他操作吗（如查询年假余额）？",
+      "pending_action": null,
+      "elapsed_ms": 2523.25,
+      "error": ""
+    },
+    {
+      "id": "A019",
+      "prompt": "作为主管，有哪些请假申请需要我审批？",
+      "employee_id": "M001",
+      "role": "manager",
+      "tools_used": [
+        "query_pending_approvals"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "您有以下 1 条待审批的请假申请：\n\n| 申请编号 | 申请人 | 日期 | 天数 | 提交时间 |\n|---|---|---|---|---|\n| LR-2026-0901 | 张三 | 2026-09-21 至 2026-09-22 | 2 天 | 2026-09-08 10:20 |\n\n如需批准或拒绝，请告诉我申请编号和（若拒绝）原因，我会生成待确认动作，您确认后才会生效。",
+      "pending_action": null,
+      "elapsed_ms": 3206.29,
+      "error": ""
+    },
+    {
+      "id": "A020",
+      "prompt": "批准申请 LR-2026-0901。",
+      "employee_id": "M001",
+      "role": "manager",
+      "tools_used": [
+        "query_pending_approvals",
+        "approve_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为您生成批准动作（待确认）：\n\n- 申请编号：LR-2026-0901\n- 申请人：张三\n- 请假时间：2026-09-21 至 2026-09-22，共 2 天\n- 审批人：李明（M001）\n\n该动作尚未真正生效，请稍后点击确认以完成批准。",
+      "pending_action": "ACT-28F2ABD1",
+      "elapsed_ms": 5006.05,
+      "error": ""
+    },
+    {
+      "id": "A021",
+      "prompt": "拒绝申请 LR-2026-0902，原因是项目上线关键期无法离岗。",
+      "employee_id": "M002",
+      "role": "manager",
+      "tools_used": [
+        "query_pending_approvals",
+        "reject_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已生成待确认的拒绝动作（尚未真正执行）：\n\n- 申请编号：LR-2026-0902\n- 申请人：赵敏\n- 请假时间：2026-09-24 至 2026-09-25，共 2 天\n- 状态：待审批\n- 拒绝原因：项目上线关键期无法离岗\n\n请稍后点击确认，确认后该拒绝才会正式生效。",
+      "pending_action": "ACT-90EE8E30",
+      "elapsed_ms": 4381.23,
+      "error": ""
+    },
+    {
+      "id": "A022",
+      "prompt": "我提交的申请现在审批到哪一步了？",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_my_leave_requests"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "您当前的申请情况如下：\n\n| 申请编号 | 请假时间 | 天数 | 状态 | 审批人 | 提交时间 |\n|---|---|---|---|---|---|\n| LR-2026-0901 | 2026-09-21 至 2026-09-22 | 2 天 | 待审批 | M001 | 2026-09-08 10:20 |\n\n目前该申请仍在**待审批**阶段，尚未有审批结果，审批人为 M001。您可以稍后再次查询确认进展。",
+      "pending_action": null,
+      "elapsed_ms": 2491.34,
+      "error": ""
+    },
+    {
+      "id": "A023",
+      "prompt": "帮我批准申请 LR-2026-0901。",
+      "employee_id": "E001",
+      "role": "employee",
+      "tools_used": [
+        "query_pending_approvals"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "抱歉，无法为你批准该申请。原因如下：\n\n- 当前会话员工为**张三（E001，研发部）**，系统显示你**不具备审批权限**（查询待审批列表时返回“当前员工没有审批权限”）。\n- 按制度，只有申请单上指定的审批人才能批准或拒绝申请。\n\n因此我不能为你生成对 LR-2026-0901 的批准动作。如果你确实是该申请的审批人，请用对应主管账号登录后再操作；或者你可以让有权限的审批人处理。需要的话，我可以帮你查询自己的请假申请或年假余额。",
+      "pending_action": null,
+      "elapsed_ms": 3862.67,
+      "error": ""
+    },
+    {
+      "id": "A024",
+      "prompt": "批准别人负责的申请 LR-2026-0901。",
+      "employee_id": "M002",
+      "role": "manager",
+      "tools_used": [
+        "query_pending_approvals"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "无法为 LR-2026-0901 生成批准动作，原因如下：\n\n- 该申请不在您（M002）的待审批列表中。当前您名下待审批的只有：\n  - **LR-2026-0902**：赵敏，2026-09-24 至 2026-09-25，2 天\n  - **LR-2026-0903**：李四，2026-10-12 至 2026-10-16，5 天\n- 按制度，只有申请单上指定的审批人才能审批，不能越权处理他人负责的申请。\n\n如需我帮您批准上述两条中的某一条，请告知申请编号，我会生成待确认动作后由您点击确认。",
+      "pending_action": null,
+      "elapsed_ms": 3557.38,
+      "error": ""
+    },
+    {
+      "id": "A025",
+      "prompt": "帮我提交 10 月 19 日当天 1 天年假申请，事由是个人事务。",
+      "employee_id": "M001",
+      "role": "manager",
+      "tools_used": [
+        "query_leave_balance",
+        "submit_leave_request"
+      ],
+      "required_ok": true,
+      "forbidden_ok": true,
+      "pending_ok": true,
+      "passed": true,
+      "answer": "已为您准备好申请，尚未提交：\n\n- **申请人**：李明（M001，研发部）\n- **假别**：年假\n- **时间**：2026-10-19 至 2026-10-19，共 1 天\n- **事由**：个人事务\n- **审批人**：G001\n\n当前 2026 年年假余额为 **3 天**（总额 10 天，已使用 7 天），扣除这 1 天后剩余 2 天。\n\n请稍后点击确认按钮完成提交，确认后才会正式写入系统。",
+      "pending_action": "ACT-CAED5E5E",
+      "elapsed_ms": 4132.04,
+      "error": ""
+    }
+  ]
+}

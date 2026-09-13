@@ -14,8 +14,10 @@ Base = declarative_base()
 
 def init_db() -> None:
     from app import models  # noqa: F401
+    from app.schema_migration import apply_schema_updates
 
     Base.metadata.create_all(bind=engine)
+    apply_schema_updates()
 
 
 def get_db():

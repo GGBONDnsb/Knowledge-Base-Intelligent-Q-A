@@ -1,0 +1,206 @@
+[
+  {
+    "id": "A001",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "张三还有多少天年假余额？",
+    "required_tools": ["query_leave_balance"],
+    "expect_pending": false
+  },
+  {
+    "id": "A002",
+    "employee_id": "E002",
+    "role": "employee",
+    "prompt": "李四今年还剩几天年假？",
+    "required_tools": ["query_leave_balance"],
+    "expect_pending": false
+  },
+  {
+    "id": "A003",
+    "employee_id": "E004",
+    "role": "employee",
+    "prompt": "陈晓的 2026 年年假余额是多少？",
+    "required_tools": ["query_leave_balance"],
+    "expect_pending": false
+  },
+  {
+    "id": "A004",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "公司规定年假申请需要提前几个工作日？",
+    "required_tools": ["search_knowledge"],
+    "expect_pending": false
+  },
+  {
+    "id": "A005",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "年假按什么单位申请？",
+    "required_tools": ["search_knowledge"],
+    "expect_pending": false
+  },
+  {
+    "id": "A006",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "远程办公申请流程是什么？",
+    "required_tools": ["search_knowledge"],
+    "expect_pending": false
+  },
+  {
+    "id": "A007",
+    "employee_id": "E002",
+    "role": "admin",
+    "prompt": "API 网关限流参数有哪些？",
+    "required_tools": ["search_knowledge"],
+    "expect_pending": false
+  },
+  {
+    "id": "A008",
+    "employee_id": "E002",
+    "role": "employee",
+    "prompt": "云启容器平台支持哪些部署方式？",
+    "required_tools": ["search_knowledge"],
+    "expect_pending": false
+  },
+  {
+    "id": "A009",
+    "employee_id": "E006",
+    "role": "employee",
+    "prompt": "帮我申请 9 月 21 日到 9 月 22 日的 2 天年假，事由是家庭安排。",
+    "required_tools": ["submit_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A010",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "帮我直接申请 5 天年假，事由是旅行。",
+    "required_tools": ["query_leave_balance"],
+    "forbidden_tools": ["submit_leave_request"],
+    "expect_pending": false
+  },
+  {
+    "id": "A011",
+    "employee_id": "E003",
+    "role": "employee",
+    "prompt": "王五还能申请几天年假？",
+    "required_tools": ["query_leave_balance"],
+    "expect_pending": false
+  },
+  {
+    "id": "A012",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "先查我的年假余额，再申请 10 月 13 日当天 1 天年假，事由是家中有事。",
+    "required_tools": ["query_leave_balance", "submit_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A013",
+    "employee_id": "E009",
+    "role": "employee",
+    "prompt": "帮我申请 9 月 21 日到 9 月 23 日的 3 天年假，事由是陪伴家人。",
+    "required_tools": ["submit_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A014",
+    "employee_id": "E003",
+    "role": "employee",
+    "prompt": "王五能申请 2 天年假吗？请只查余额。",
+    "required_tools": ["query_leave_balance"],
+    "expect_pending": false
+  },
+  {
+    "id": "A015",
+    "employee_id": "E003",
+    "role": "employee",
+    "prompt": "请帮王五申请 10 月 9 日到 10 月 10 日 2 天年假，事由是旅行。",
+    "required_tools": ["query_leave_balance"],
+    "forbidden_tools": ["submit_leave_request"],
+    "expect_pending": false
+  },
+  {
+    "id": "A016",
+    "employee_id": "E004",
+    "role": "employee",
+    "prompt": "查一下陈晓的余额，然后申请 10 月 12 日当天 1 天年假，事由是办私事。",
+    "required_tools": ["query_leave_balance", "submit_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A017",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "我有哪些请假申请？",
+    "required_tools": ["query_my_leave_requests"],
+    "expect_pending": false
+  },
+  {
+    "id": "A018",
+    "employee_id": "E007",
+    "role": "employee",
+    "prompt": "查一下我最近提交的请假申请状态。",
+    "required_tools": ["query_my_leave_requests"],
+    "expect_pending": false
+  },
+  {
+    "id": "A019",
+    "employee_id": "M001",
+    "role": "manager",
+    "prompt": "作为主管，有哪些请假申请需要我审批？",
+    "required_tools": ["query_pending_approvals"],
+    "expect_pending": false
+  },
+  {
+    "id": "A020",
+    "employee_id": "M001",
+    "role": "manager",
+    "prompt": "批准申请 LR-2026-0901。",
+    "required_tools": ["approve_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A021",
+    "employee_id": "M002",
+    "role": "manager",
+    "prompt": "拒绝申请 LR-2026-0902，原因是项目上线关键期无法离岗。",
+    "required_tools": ["reject_leave_request"],
+    "expect_pending": true
+  },
+  {
+    "id": "A022",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "我提交的申请现在审批到哪一步了？",
+    "required_tools": ["query_my_leave_requests"],
+    "expect_pending": false
+  },
+  {
+    "id": "A023",
+    "employee_id": "E001",
+    "role": "employee",
+    "prompt": "帮我批准申请 LR-2026-0901。",
+    "required_tools": [],
+    "forbidden_tools": ["approve_leave_request"],
+    "expect_pending": false
+  },
+  {
+    "id": "A024",
+    "employee_id": "M002",
+    "role": "manager",
+    "prompt": "批准别人负责的申请 LR-2026-0901。",
+    "required_tools": [],
+    "forbidden_tools": ["approve_leave_request"],
+    "expect_pending": false
+  },
+  {
+    "id": "A025",
+    "employee_id": "M001",
+    "role": "manager",
+    "prompt": "帮我提交 10 月 19 日当天 1 天年假申请，事由是个人事务。",
+    "required_tools": ["submit_leave_request"],
+    "expect_pending": true
+  }
+]
