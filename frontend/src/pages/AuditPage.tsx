@@ -23,6 +23,7 @@ import {
 
 const STATUS_COLORS: Record<string, string> = {
   待确认: 'orange',
+  处理中: 'processing',
   已完成: 'green',
   已取消: 'default',
   已过期: 'purple',
@@ -41,7 +42,8 @@ const EVENT_LABELS: Record<string, string> = {
   executed: '执行成功',
   failed: '执行失败',
   cancelled: '用户已取消',
-  expired: '确认已过期'
+  expired: '确认已过期',
+  revised: '草稿已修改'
 }
 
 const EVENT_COLORS: Record<string, string> = {
@@ -50,7 +52,8 @@ const EVENT_COLORS: Record<string, string> = {
   executed: 'green',
   failed: 'red',
   cancelled: 'gray',
-  expired: 'purple'
+  expired: 'purple',
+  revised: 'cyan'
 }
 
 function formatTime(value: string | null) {

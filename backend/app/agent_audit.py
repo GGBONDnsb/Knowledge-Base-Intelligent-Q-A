@@ -24,6 +24,7 @@ EVENT_TYPES = {
     "failed",
     "cancelled",
     "expired",
+    "revised",
 }
 
 

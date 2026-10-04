@@ -1,3 +1,5 @@
+from concurrent.futures import ThreadPoolExecutor
+import json
 from types import SimpleNamespace
 
 import pytest
@@ -11,7 +13,7 @@ from app.agent_tools import (
     submit_leave_request,
 )
 from app.agent_data import ensure_demo_data
-from app.agent_service import PendingActionStore, pending_store
+from app.agent_service import PendingActionStore, pending_store, run_agent
 from app.database import SessionLocal
 from app.models import (
     ActionEvent,
@@ -144,6 +146,157 @@ def test_manager_leave_is_approved_by_general_manager(client):
         {}, employee_id="G001", role="manager"
     )
     assert request_id in approvals.content
+
+
+def test_multi_turn_revision_reuses_pending_action(client, monkeypatch):
+    first_calls = iter(
+        [
+            _message(
+                None,
+                [
+                    _tool_call(
+                        "call-submit",
+                        "submit_leave_request",
+                        json.dumps(
+                            {
+                                "employee_name": "刘洋",
+                                "leave_type": "年假",
+                                "start_date": "2026-10-13",
+                                "end_date": "2026-10-14",
+                                "days": 1,
+                                "reason": "个人事务",
+                            },
+                            ensure_ascii=False,
+                        ),
+                    )
+                ],
+            ),
+            _message("已生成待确认申请，请确认。"),
+        ]
+    )
+    monkeypatch.setattr(
+        "app.agent_service.call_agent_model",
+        lambda messages, tools=None: next(first_calls),
+    )
+    first = run_agent(
+        message="帮我申请 10 月 13 日到 14 日 1 天年假，事由是个人事务。",
+        employee_id="E006",
+        role="employee",
+    )
+    assert first.pending_action is not None
+    action_id = first.pending_action.action_id
+
+    captured: dict[str, str] = {}
+    second_calls = iter(
+        [
+            _message(
+                None,
+                [
+                    _tool_call(
+                        "call-revise",
+                        "revise_leave_request_draft",
+                        json.dumps(
+                            {"action_id": action_id, "days": 2},
+                            ensure_ascii=False,
+                        ),
+                    )
+                ],
+            ),
+            _message("已将申请修改为 2 天，请重新确认。"),
+        ]
+    )
+
+    def second_model(messages, tools=None):
+        captured["system"] = messages[0]["content"]
+        return next(second_calls)
+
+    monkeypatch.setattr(
+        "app.agent_service.call_agent_model",
+        second_model,
+    )
+    second = run_agent(
+        message="改成 2 天。",
+        employee_id="E006",
+        role="employee",
+        session_id=first.session_id,
+    )
+    assert action_id in captured["system"]
+    assert second.pending_action is not None
+    assert second.pending_action.action_id == action_id
+    assert second.pending_action.payload["days"] == 2
+
+    db = SessionLocal()
+    try:
+        event_types = [
+            row.event_type
+            for row in (
+                db.query(ActionEvent)
+                .filter(ActionEvent.action_id == action_id)
+                .order_by(ActionEvent.created_at.asc())
+                .all()
+            )
+        ]
+        assert event_types == ["created", "revised"]
+    finally:
+        db.close()
+
+
+def test_concurrent_confirm_executes_only_once(client):
+    result = submit_leave_request(
+        {
+            "employee_name": "刘洋",
+            "leave_type": "年假",
+            "start_date": "2026-10-13",
+            "end_date": "2026-10-14",
+            "days": 1,
+            "reason": "并发测试",
+        },
+        employee_id="E006",
+        role="employee",
+    )
+    assert result.pending_action is not None
+    action_id = result.pending_action.action_id
+    pending_store.put(result.pending_action, session_id="concurrency-test")
+
+    db = SessionLocal()
+    try:
+        before_count = db.query(LeaveRequest).count()
+    finally:
+        db.close()
+
+    def confirm_once() -> str:
+        try:
+            pending_store.confirm(action_id, "E006")
+            return "success"
+        except (ValueError, KeyError):
+            return "rejected"
+
+    with ThreadPoolExecutor(max_workers=2) as executor:
+        outcomes = list(executor.map(lambda _: confirm_once(), range(2)))
+
+    assert sorted(outcomes) == ["rejected", "success"]
+
+    db = SessionLocal()
+    try:
+        assert db.query(LeaveRequest).count() == before_count + 1
+        action = (
+            db.query(AgentAction)
+            .filter(AgentAction.action_id == action_id)
+            .first()
+        )
+        assert action.status == "已完成"
+        event_types = [
+            row.event_type
+            for row in (
+                db.query(ActionEvent)
+                .filter(ActionEvent.action_id == action_id)
+                .order_by(ActionEvent.created_at.asc())
+                .all()
+            )
+        ]
+        assert event_types == ["created", "confirmed", "executed"]
+    finally:
+        db.close()
 
 
 def test_agent_submit_requires_confirmation_then_confirm(client, monkeypatch):

@@ -105,6 +105,7 @@ export interface AgentActionEvent {
     | 'failed'
     | 'cancelled'
     | 'expired'
+    | 'revised'
   actor_employee_id: string
   actor_name: string
   detail: Record<string, unknown>

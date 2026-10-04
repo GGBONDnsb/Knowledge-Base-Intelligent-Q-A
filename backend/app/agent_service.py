@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from typing import Any
 
 from openai import OpenAI
+from sqlalchemy import update
 
 from app.agent_audit import record_event
 from app.agent_data import DEMO_YEAR, ensure_demo_data
@@ -36,8 +37,11 @@ SYSTEM_PROMPT = """你是云启科技的业务助手。
 7. 主管或管理员可以发起自己的请假，审批人由系统指定为总经理，不能自审。
 8. 用户明确要求批准或拒绝时，即使已经查询过申请，也必须继续调用
    approve_leave_request 或 reject_leave_request，禁止只口头声称已生成动作。
-9. 需要用户确认时，用自然语言说明申请摘要，并告诉用户稍后点击确认。
-10. 回答使用中文，简洁、准确。"""
+9. 用户说“改成、换成、调整刚才的申请”时，必须调用
+   revise_leave_request_draft，并复用系统提供的 action_id。
+10. 不得为同一次修订新建第二条待确认动作。
+11. 需要用户确认时，用自然语言说明申请摘要，并告诉用户稍后点击确认。
+12. 回答使用中文，简洁、准确。"""
 
 
 @dataclass
@@ -98,8 +102,19 @@ class PendingActionStore:
                     row = AgentAction(action_id=action.action_id)
                     db.add(row)
                     is_new = True
+                    previous_payload: dict[str, Any] = {}
                 else:
                     is_new = False
+                    if row.status != "待确认":
+                        raise ValueError(
+                            f"动作当前状态为“{row.status}”，不能修改"
+                        )
+                    try:
+                        previous_payload = json.loads(
+                            row.payload_json or "{}"
+                        )
+                    except json.JSONDecodeError:
+                        previous_payload = {}
                 created_at = (
                     datetime.fromisoformat(action.created_at)
                     if action.created_at
@@ -128,6 +143,18 @@ class PendingActionStore:
                             "tool_name": action.tool,
                             "summary": action.summary,
                             "payload": action.payload,
+                        },
+                    )
+                else:
+                    record_event(
+                        db,
+                        action.action_id,
+                        "revised",
+                        action.employee_id,
+                        {
+                            "previous_payload": previous_payload,
+                            "payload": action.payload,
+                            "summary": action.summary,
                         },
                     )
                 db.commit()
@@ -178,7 +205,21 @@ class PendingActionStore:
                     )
                     db.commit()
                     raise ValueError("待确认动作已过期，请重新发起申请")
-                row.confirmed_at = datetime.now()
+                claimed = db.execute(
+                    update(AgentAction)
+                    .where(
+                        AgentAction.action_id == action_id,
+                        AgentAction.status == "待确认",
+                    )
+                    .values(
+                        status="处理中",
+                        confirmed_at=datetime.now(),
+                    )
+                    .execution_options(synchronize_session=False)
+                )
+                if claimed.rowcount != 1:
+                    db.rollback()
+                    raise ValueError("动作已被其他请求处理")
                 record_event(
                     db,
                     row.action_id,
@@ -285,8 +326,21 @@ class PendingActionStore:
                     raise ValueError("只能取消自己的操作")
                 if row.status != "待确认":
                     raise ValueError(f"该动作当前状态为“{row.status}”，不能取消")
-                row.status = "已取消"
-                row.cancelled_at = datetime.now()
+                cancelled = db.execute(
+                    update(AgentAction)
+                    .where(
+                        AgentAction.action_id == action_id,
+                        AgentAction.status == "待确认",
+                    )
+                    .values(
+                        status="已取消",
+                        cancelled_at=datetime.now(),
+                    )
+                    .execution_options(synchronize_session=False)
+                )
+                if cancelled.rowcount != 1:
+                    db.rollback()
+                    raise ValueError("动作已被其他请求处理")
                 record_event(
                     db,
                     row.action_id,
@@ -400,7 +454,44 @@ def _save_conversation(
         db.close()
 
 
-def _build_system_message(employee: Employee) -> dict[str, str]:
+def _pending_action_context(
+    session_id: str,
+    employee_id: str,
+) -> str:
+    db = SessionLocal()
+    try:
+        rows = (
+            db.query(AgentAction)
+            .filter(
+                AgentAction.session_id == session_id,
+                AgentAction.employee_id == employee_id,
+                AgentAction.status == "待确认",
+            )
+            .order_by(AgentAction.created_at.desc())
+            .all()
+        )
+        if not rows:
+            return "当前会话没有待确认动作。"
+        lines = []
+        for row in rows:
+            try:
+                payload = json.loads(row.payload_json or "{}")
+            except json.JSONDecodeError:
+                payload = {}
+            lines.append(
+                f"- action_id={row.action_id}；工具={row.tool_name}；"
+                f"摘要={row.summary}；参数="
+                f"{json.dumps(payload, ensure_ascii=False)}"
+            )
+        return "\n".join(lines)
+    finally:
+        db.close()
+
+
+def _build_system_message(
+    employee: Employee,
+    pending_context: str,
+) -> dict[str, str]:
     today = datetime.now().date().isoformat()
     return {
         "role": "system",
@@ -408,7 +499,8 @@ def _build_system_message(employee: Employee) -> dict[str, str]:
             f"{SYSTEM_PROMPT}\n"
             f"今天是 {today}。当前会话员工：{employee.name}"
             f"（{employee.employee_id}，{employee.department}）。"
-            f"年度余额基准年为 {DEMO_YEAR}。"
+            f"年度余额基准年为 {DEMO_YEAR}。\n"
+            f"当前会话待确认动作：\n{pending_context}"
         ),
     }
 
@@ -440,7 +532,17 @@ def run_agent(
         db.close()
 
     user_message = {"role": "user", "content": text}
-    working_messages = [_build_system_message(employee), *conversation, user_message]
+    working_messages = [
+        _build_system_message(
+            employee,
+            _pending_action_context(
+                resolved_session_id,
+                employee.employee_id,
+            ),
+        ),
+        *conversation,
+        user_message,
+    ]
     citations: list[dict] = []
     pending_action: PendingAction | None = None
     answer = ""

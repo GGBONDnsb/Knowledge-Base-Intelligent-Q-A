@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import uuid
 from dataclasses import dataclass, field
 from datetime import date, datetime
@@ -9,9 +10,10 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app import retrieval
+from app.agent_audit import record_event
 from app.agent_data import DEMO_YEAR
 from app.database import SessionLocal
-from app.models import Employee, LeaveBalance, LeaveRequest
+from app.models import AgentAction, Employee, LeaveBalance, LeaveRequest
 
 VALID_LEAVE_TYPES = {"年假"}
 
@@ -128,6 +130,50 @@ TOOL_SPECS: list[dict] = [
                     },
                 },
                 "required": ["request_id", "reason"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "query_pending_actions",
+            "description": "查询当前员工尚待确认的写操作草稿，例如刚生成但尚未确认的请假申请。",
+            "parameters": {
+                "type": "object",
+                "properties": {},
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "revise_leave_request_draft",
+            "description": "修改当前员工尚未确认的请假申请草稿。用户说改成、换成、调整刚才的申请时使用。只修改待确认动作，不提交业务申请。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "action_id": {
+                        "type": "string",
+                        "description": "待修改的动作编号",
+                    },
+                    "start_date": {
+                        "type": "string",
+                        "description": "新的开始日期 YYYY-MM-DD，可选",
+                    },
+                    "end_date": {
+                        "type": "string",
+                        "description": "新的结束日期 YYYY-MM-DD，可选",
+                    },
+                    "days": {
+                        "type": "number",
+                        "description": "新的申请天数，可选",
+                    },
+                    "reason": {
+                        "type": "string",
+                        "description": "新的请假事由，可选",
+                    },
+                },
+                "required": ["action_id"],
             },
         },
     },
@@ -391,6 +437,129 @@ def query_pending_approvals(
     )
 
 
+def query_pending_actions(
+    args: dict[str, Any], employee_id: str, role: str
+) -> ToolResult:
+    db = SessionLocal()
+    try:
+        rows = (
+            db.query(AgentAction)
+            .filter(
+                AgentAction.employee_id == employee_id,
+                AgentAction.status == "待确认",
+            )
+            .order_by(AgentAction.created_at.desc())
+            .all()
+        )
+        if not rows:
+            return ToolResult("当前没有待确认的写操作。")
+        lines = []
+        for row in rows:
+            try:
+                payload = json.loads(row.payload_json or "{}")
+            except json.JSONDecodeError:
+                payload = {}
+            lines.append(
+                f"{row.action_id}：{row.summary}；参数："
+                f"{json.dumps(payload, ensure_ascii=False)}"
+            )
+        return ToolResult(content="\n".join(lines))
+    finally:
+        db.close()
+
+
+def revise_leave_request_draft(
+    args: dict[str, Any], employee_id: str, role: str
+) -> ToolResult:
+    action_id = str(args.get("action_id", "")).strip()
+    if not action_id:
+        raise ValueError("缺少待修改的动作编号")
+    update_fields = {
+        key for key in ("start_date", "end_date", "days", "reason")
+        if args.get(key) is not None and str(args.get(key)).strip() != ""
+    }
+    if not update_fields:
+        raise ValueError("没有提供需要修改的内容")
+
+    db = SessionLocal()
+    try:
+        row = (
+            db.query(AgentAction)
+            .filter(
+                AgentAction.action_id == action_id,
+                AgentAction.employee_id == employee_id,
+            )
+            .first()
+        )
+        if row is None:
+            raise ValueError("未找到当前员工的待确认动作")
+        if row.tool_name != "submit_leave_request":
+            raise ValueError("只有请假申请草稿可以修改")
+        if row.status != "待确认":
+            raise ValueError(f"动作当前状态为“{row.status}”，不能修改")
+        if row.expires_at and row.expires_at < datetime.now():
+            row.status = "已过期"
+            row.error_message = "待确认动作已过期"
+            record_event(
+                db,
+                row.action_id,
+                "expired",
+                employee_id,
+                {"reason": row.error_message},
+            )
+            db.commit()
+            raise ValueError("待确认动作已过期，请重新发起申请")
+
+        try:
+            payload = json.loads(row.payload_json or "{}")
+        except json.JSONDecodeError:
+            payload = {}
+        employee = _resolve_employee(db, employee_id=employee_id)
+        leave_type = str(payload.get("leave_type", "年假"))
+        start_date = str(
+            args.get("start_date") or payload.get("start_date", "")
+        ).strip()
+        end_date = str(
+            args.get("end_date") or payload.get("end_date", "")
+        ).strip()
+        reason = str(
+            args.get("reason") or payload.get("reason", "")
+        ).strip()
+        try:
+            days = float(args.get("days") or payload.get("days"))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("申请天数必须是数字") from exc
+
+        approver_id = _validate_leave_values(
+            db,
+            employee,
+            leave_type,
+            start_date,
+            end_date,
+            days,
+            reason,
+        )
+        revised = _build_pending_action(
+            employee,
+            approver_id,
+            leave_type,
+            start_date,
+            end_date,
+            days,
+            reason,
+            action_id=action_id,
+        )
+        return ToolResult(
+            content=(
+                f"已修改待确认请假草稿：{revised.summary}。"
+                "请重新确认后再提交。"
+            ),
+            pending_action=revised,
+        )
+    finally:
+        db.close()
+
+
 def _build_review_action(
     action: str,
     request: LeaveRequest,
@@ -520,10 +689,11 @@ def _build_pending_action(
     end_date: str,
     days: float,
     reason: str,
+    action_id: str | None = None,
 ) -> PendingAction:
     created_at = datetime.now().astimezone().isoformat(timespec="seconds")
     return PendingAction(
-        action_id=f"ACT-{uuid.uuid4().hex[:8].upper()}",
+        action_id=action_id or f"ACT-{uuid.uuid4().hex[:8].upper()}",
         tool="submit_leave_request",
         employee_id=employee.employee_id,
         summary=(
@@ -544,6 +714,69 @@ def _build_pending_action(
     )
 
 
+def _validate_leave_values(
+    db: Session,
+    employee: Employee,
+    leave_type: str,
+    start_date: str,
+    end_date: str,
+    days: float,
+    reason: str,
+) -> str:
+    if leave_type not in VALID_LEAVE_TYPES:
+        raise ValueError("当前 Agent 版本仅支持年假申请")
+    if not reason:
+        raise ValueError("请填写请假事由")
+    if days <= 0 or abs(days * 2 - round(days * 2)) > 1e-6:
+        raise ValueError("年假天数应为 0.5 的正整数倍")
+
+    start = _parse_date(start_date)
+    end = _parse_date(end_date)
+    weekday_count = _weekday_count(start, end)
+    if weekday_count < days:
+        raise ValueError(
+            f"所选日期只包含 {weekday_count:g} 个工作日，"
+            f"少于申请的 {days:g} 天"
+        )
+
+    balance = _get_balance(db, employee, DEMO_YEAR)
+    remaining = balance.total_days - balance.used_days
+    pending = _pending_days(db, employee, leave_type)
+    available = remaining - pending
+    duplicate = (
+        db.query(LeaveRequest)
+        .filter(
+            LeaveRequest.employee_id == employee.id,
+            LeaveRequest.leave_type == leave_type,
+            LeaveRequest.start_date == start_date,
+            LeaveRequest.end_date == end_date,
+            LeaveRequest.status == "待审批",
+        )
+        .first()
+    )
+    if duplicate:
+        raise ValueError("该员工已有一条相同时间段的待审批年假申请")
+    if days > available:
+        raise ValueError(
+            f"{employee.name} 当前可申请年假仅 {available:g} 天，"
+            f"无法申请 {days:g} 天（账面余额 {remaining:g} 天，"
+            f"待审批占用 {pending:g} 天）"
+        )
+    if employee.role == "employee":
+        approver_id = (
+            employee.manager_id
+            if days <= 3
+            else employee.department_head_id
+        )
+    else:
+        approver_id = employee.manager_id or employee.department_head_id
+    if not approver_id:
+        raise ValueError("当前员工未配置对应审批人")
+    if approver_id == employee.employee_id:
+        raise ValueError("总经理账号没有更高级审批人，暂不支持发起请假")
+    return approver_id
+
+
 def submit_leave_request(
     args: dict[str, Any], employee_id: str, role: str
 ) -> ToolResult:
@@ -557,21 +790,6 @@ def submit_leave_request(
     except (TypeError, ValueError) as exc:
         raise ValueError("申请天数必须是数字") from exc
 
-    if leave_type not in VALID_LEAVE_TYPES:
-        raise ValueError("当前 Agent 版本仅支持年假申请")
-    if not reason:
-        raise ValueError("请填写请假事由")
-    if days <= 0 or abs(days * 2 - round(days * 2)) > 1e-6:
-        raise ValueError("年假天数应为 0.5 的正整数倍")
-
-    start = _parse_date(start_date)
-    end = _parse_date(end_date)
-    weekday_count = _weekday_count(start, end)
-    if weekday_count < days:
-        raise ValueError(
-            f"所选日期只包含 {weekday_count:g} 个工作日，少于申请的 {days:g} 天"
-        )
-
     db = SessionLocal()
     try:
         employee = _resolve_employee(
@@ -579,43 +797,15 @@ def submit_leave_request(
         )
         if employee.employee_id != employee_id:
             raise ValueError("只能为当前会话员工提交申请")
-        balance = _get_balance(db, employee, DEMO_YEAR)
-        remaining = balance.total_days - balance.used_days
-        pending = _pending_days(db, employee, leave_type)
-        available = remaining - pending
-        duplicate = (
-            db.query(LeaveRequest)
-            .filter(
-                LeaveRequest.employee_id == employee.id,
-                LeaveRequest.leave_type == leave_type,
-                LeaveRequest.start_date == start_date,
-                LeaveRequest.end_date == end_date,
-                LeaveRequest.status == "待审批",
-            )
-            .first()
+        approver_id = _validate_leave_values(
+            db,
+            employee,
+            leave_type,
+            start_date,
+            end_date,
+            days,
+            reason,
         )
-        if duplicate:
-            raise ValueError("该员工已有一条相同时间段的待审批年假申请")
-        if days > available:
-            raise ValueError(
-                f"{employee.name} 当前可申请年假仅 {available:g} 天，"
-                f"无法申请 {days:g} 天（账面余额 {remaining:g} 天，"
-                f"待审批占用 {pending:g} 天）"
-            )
-        if employee.role == "employee":
-            approver_id = (
-                employee.manager_id
-                if days <= 3
-                else employee.department_head_id
-            )
-        else:
-            approver_id = (
-                employee.manager_id or employee.department_head_id
-            )
-        if not approver_id:
-            raise ValueError("当前员工未配置对应审批人")
-        if approver_id == employee.employee_id:
-            raise ValueError("总经理账号没有更高级审批人，暂不支持发起请假")
         action = _build_pending_action(
             employee,
             approver_id,
@@ -755,6 +945,10 @@ def execute_tool(
         return query_my_leave_requests(args, employee_id, role)
     if name == "query_pending_approvals":
         return query_pending_approvals(args, employee_id, role)
+    if name == "query_pending_actions":
+        return query_pending_actions(args, employee_id, role)
+    if name == "revise_leave_request_draft":
+        return revise_leave_request_draft(args, employee_id, role)
     if name == "approve_leave_request":
         return approve_leave_request(args, employee_id, role)
     if name == "reject_leave_request":
