@@ -7,6 +7,7 @@ import pytest
 from app import retrieval
 from app.agent_tools import (
     approve_leave_request,
+    cancel_leave_request_draft,
     query_leave_balance,
     query_my_leave_requests,
     query_pending_approvals,
@@ -99,6 +100,15 @@ def test_query_balance_tool_reports_pending_capacity(client):
     assert "年假余额 3 天" in result.content
     assert "待审批申请占用 2 天" in result.content
     assert "当前可申请 1 天" in result.content
+
+
+def test_employee_cannot_query_other_balance(client):
+    with pytest.raises(ValueError, match="只能查询自己"):
+        query_leave_balance(
+            {"employee_name": "李四"},
+            employee_id="E001",
+            role="employee",
+        )
 
 
 def test_employee_can_only_query_own_requests(client):
@@ -295,6 +305,45 @@ def test_concurrent_confirm_executes_only_once(client):
             )
         ]
         assert event_types == ["created", "confirmed", "executed"]
+    finally:
+        db.close()
+
+
+def test_cancel_pending_action_tool(client):
+    result = submit_leave_request(
+        {
+            "employee_name": "刘洋",
+            "leave_type": "年假",
+            "start_date": "2026-10-13",
+            "end_date": "2026-10-14",
+            "days": 1,
+            "reason": "个人事务",
+        },
+        employee_id="E006",
+        role="employee",
+    )
+    assert result.pending_action is not None
+    pending_store.put(result.pending_action, session_id="cancel-tool-test")
+
+    cancelled = cancel_leave_request_draft(
+        {"action_id": result.pending_action.action_id},
+        employee_id="E006",
+        role="employee",
+    )
+    assert "已取消" in cancelled.content
+
+    db = SessionLocal()
+    try:
+        action = (
+            db.query(AgentAction)
+            .filter(
+                AgentAction.action_id
+                == result.pending_action.action_id
+            )
+            .first()
+        )
+        assert action.status == "已取消"
+        assert db.query(LeaveRequest).count() == 7
     finally:
         db.close()
 

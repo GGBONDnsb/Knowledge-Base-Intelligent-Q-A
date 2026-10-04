@@ -9,11 +9,11 @@
 - RAG 全链路：数据导入、切块、混合检索、Rerank、生成、引用与拒答。
 - 检索效果可量化：50 道评测题 Hit@5 从 BM25 的 82% 提升到 BGE Rerank 后的 90%。
 - 角色权限过滤：员工只能检索“全员”文档，管理员可检索全部文档。
-- 自动化测试：33 个 pytest 用例覆盖 V1 问答/文档链路与 V2 登录、权限、审批、多轮修订、并发幂等、审计和重置。
+- 自动化测试：35 个 pytest 用例覆盖 V1 问答/文档链路与 V2 登录、权限、审批、多轮修订、并发幂等、审计和重置。
 - 中英双语文档：支持中文问题检索英文技术文档。
 - 本地可运行：不依赖 Docker 和 GPU，首次运行自动下载模型缓存。
-- V2 业务 Agent：DeepSeek function calling、9 个业务工具、多步任务、草稿修订、写操作人工确认和操作审计。
-- Agent 真实评测：25 条任务级场景全部通过，覆盖查询、检索、申请、审批和越权拦截。
+- V2 业务 Agent：DeepSeek function calling、10 个业务工具、多步任务、草稿修订与取消、写操作人工确认和操作审计。
+- Agent 评测集：60 条任务级场景，覆盖知识检索、申请审批、多轮修订、失败约束和越权拦截。
 
 ## 评测结果
 
@@ -22,7 +22,7 @@
 | BM25 | 82.0% | 100% | 93.8% | 50.0% |
 | BM25 + 向量混合 | 86.0% | 94.4% | 100% | 62.5% |
 | 混合 + BGE Rerank | 90.0% | 100% | 100% | 68.8% |
-| Agent 任务评测 | 100.0%（25/25） | - | - | - |
+| Agent 任务评测 | 60 条场景 | - | - | - |
 
 评测题目和脚本位于 `backend/eval`，报告见 `report_bm25.md`、`report_hybrid.md` 与 `agent_report.md`。
 
@@ -183,6 +183,7 @@ V2 在保留 `/api/chat` 和文档管理链路的基础上独立新增 `/api/age
 - `query_pending_approvals`：主管查询待自己审批的申请。
 - `query_pending_actions`：查询当前员工尚未确认的写操作草稿。
 - `revise_leave_request_draft`：修改尚未确认的请假草稿，复用原动作编号。
+- `cancel_leave_request_draft`：取消尚未确认的请假草稿。
 - `approve_leave_request`：生成批准申请的待确认动作。
 - `reject_leave_request`：生成拒绝申请的待确认动作。
 - `search_knowledge`：复用 V1 混合检索链路，回答知识库问题并保留引用。
@@ -226,13 +227,16 @@ python -m app.interview_data_import
 
 ## Agent 评测
 
-`backend/eval/agent_questions.json` 内置 25 条任务级场景，覆盖余额查询、知识检索、提交请假、审批、越权请求和复合任务。当前真实模型评测通过率 25/25，报告见 `agent_report.md`。执行：
+`backend/eval/agent_questions.json` 内置 60 条任务级场景，分为基础任务、多轮修订、失败与约束、权限安全、扩展查询五类。评测脚本支持多轮会话、必需工具、任一工具、禁止工具、待确认状态和关键回答片段校验。执行：
 
 ```bash
 cd backend
 python -m eval.run_agent_eval
 python -m eval.run_agent_eval --limit 3
+python -m eval.run_agent_eval --validate-only
 ```
+
+`--validate-only` 不调用模型，只检查 60 条数据、分类和 ID 唯一性。真实评测需要可用的 DeepSeek 余额；如果模型服务返回 402，脚本会终止并保留已执行结果，未执行用例不计入业务失败。
 
 ## 接口一览
 

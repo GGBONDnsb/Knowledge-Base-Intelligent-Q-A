@@ -180,6 +180,23 @@ TOOL_SPECS: list[dict] = [
     {
         "type": "function",
         "function": {
+            "name": "cancel_leave_request_draft",
+            "description": "取消当前员工尚未确认的请假申请草稿。用户说取消刚才的申请、不要这条草稿时使用。",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "action_id": {
+                        "type": "string",
+                        "description": "待取消的动作编号",
+                    }
+                },
+                "required": ["action_id"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
             "name": "search_knowledge",
             "description": "搜索企业知识库制度、产品和技术文档，用于回答年假制度、流程等知识问题。",
             "parameters": {
@@ -318,7 +335,30 @@ def query_leave_balance(
     year = int(args.get("year") or DEMO_YEAR)
     db = SessionLocal()
     try:
+        current = _resolve_employee(db, employee_id=employee_id)
         employee = _resolve_employee(db, employee_name=employee_name)
+        if current.role == "employee" and employee.employee_id != employee_id:
+            raise ValueError("普通员工只能查询自己的年假余额")
+        if (
+            current.role == "manager"
+            and employee.employee_id
+            not in {
+                current.employee_id,
+                *[
+                    item.employee_id
+                    for item in db.query(Employee)
+                    .filter(
+                        (Employee.manager_id == current.employee_id)
+                        | (
+                            Employee.department_head_id
+                            == current.employee_id
+                        )
+                    )
+                    .all()
+                ],
+            }
+        ):
+            raise ValueError("主管只能查询自己权限范围内的员工")
         balance = _get_balance(db, employee, year)
         remaining = balance.total_days - balance.used_days
         pending = _pending_days(db, employee)
@@ -555,6 +595,43 @@ def revise_leave_request_draft(
                 "请重新确认后再提交。"
             ),
             pending_action=revised,
+        )
+    finally:
+        db.close()
+
+
+def cancel_leave_request_draft(
+    args: dict[str, Any], employee_id: str, role: str
+) -> ToolResult:
+    action_id = str(args.get("action_id", "")).strip()
+    if not action_id:
+        raise ValueError("缺少待取消的动作编号")
+    db = SessionLocal()
+    try:
+        row = (
+            db.query(AgentAction)
+            .filter(
+                AgentAction.action_id == action_id,
+                AgentAction.employee_id == employee_id,
+            )
+            .first()
+        )
+        if row is None:
+            raise ValueError("未找到当前员工的待确认动作")
+        if row.status != "待确认":
+            raise ValueError(f"动作当前状态为“{row.status}”，不能取消")
+        row.status = "已取消"
+        row.cancelled_at = datetime.now()
+        record_event(
+            db,
+            row.action_id,
+            "cancelled",
+            employee_id,
+            {"tool_name": row.tool_name},
+        )
+        db.commit()
+        return ToolResult(
+            content=f"待确认动作 {action_id} 已取消，未写入业务数据。"
         )
     finally:
         db.close()
@@ -949,6 +1026,8 @@ def execute_tool(
         return query_pending_actions(args, employee_id, role)
     if name == "revise_leave_request_draft":
         return revise_leave_request_draft(args, employee_id, role)
+    if name == "cancel_leave_request_draft":
+        return cancel_leave_request_draft(args, employee_id, role)
     if name == "approve_leave_request":
         return approve_leave_request(args, employee_id, role)
     if name == "reject_leave_request":
