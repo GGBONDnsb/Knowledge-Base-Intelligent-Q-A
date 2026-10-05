@@ -22,7 +22,7 @@
 | BM25 | 82.0% | 100% | 93.8% | 50.0% |
 | BM25 + 向量混合 | 86.0% | 94.4% | 100% | 62.5% |
 | 混合 + BGE Rerank | 90.0% | 100% | 100% | 68.8% |
-| Agent 任务评测 | 60 条场景 | - | - | - |
+| Agent 任务评测 | 100.0%（60/60） | - | - | - |
 
 评测题目和脚本位于 `backend/eval`，报告见 `report_bm25.md`、`report_hybrid.md` 与 `agent_report.md`。
 
@@ -227,7 +227,7 @@ python -m app.interview_data_import
 
 ## Agent 评测
 
-`backend/eval/agent_questions.json` 内置 60 条任务级场景，分为基础任务、多轮修订、失败与约束、权限安全、扩展查询五类。评测脚本支持多轮会话、必需工具、任一工具、禁止工具、待确认状态和关键回答片段校验。执行：
+`backend/eval/agent_questions.json` 内置 60 条任务级场景，分为基础任务、多轮修订、失败与约束、权限安全、扩展查询五类。当前真实模型评测通过率 60/60，报告见 `agent_report.md`。评测脚本支持多轮会话、必需工具、任一工具、禁止工具、待确认状态和关键回答片段校验。执行：
 
 ```bash
 cd backend
